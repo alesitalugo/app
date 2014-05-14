@@ -3,7 +3,7 @@ html, body{
 	height: 100%;
 	position: relative;
 	background-color:#6999c7 ;
-	background-image: url(../images/nubes.png);
+	background-image: url('../images/nubes.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -98,7 +98,7 @@ html, body{
 
 }
 #header .nav .menu-item .link-menu .icon{
-	background: url(../images/icon01.png) no-repeat;
+	background: url('../images/icon01.png') no-repeat;
 	background-position: center;
 	width: 50px;
 	height: 50px;
@@ -237,7 +237,7 @@ html, body{
 	margin: 0 auto;
 }
 .grass{
-	background: url(../images/pasto01.png);
+	background: url('../images/pasto01.png');
 	width: 980px;
 	height: 801px;
 	position: fixed;
@@ -258,7 +258,11 @@ html, body{
 	list-style-type: none;
 }
 #page_menu .page-item a{
-
+	text-align: center;
+	color: #8bb03c;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 #page_menu .page-item a:hover{
 	
@@ -277,6 +281,10 @@ html, body{
 }
 #external_links .external_item a{
 	text-align: center;
+	color:#8bb03c;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 #external_links .external_item a:hover{
 
@@ -379,14 +387,14 @@ html, body{
 	color: #fff;
 }
 .go_link{
-	background-image: url(../images/go01.png);
+	background-image: url('../images/go01.png');
 	width: 35px;
 	height: 35px;
 	display: block;
 	position: absolute;
 }
 .price_item:hover > .go_link{
-	background-image: url(../images/go02.png);
+	background-image: url('../images/go02.png');
 }
 #calificacion_table{
 	margin: 0 auto;
@@ -406,7 +414,7 @@ html, body{
 	border-radius: 25px 25px 25px 25px;
 }
 .info_vivienda .icon{
-	background-image: url(../images/icon_vivienda.png);
+	background-image: url('../images/icon_vivienda.png');
 	width: 35px;
 	height: 35px;
 	display: block;
@@ -468,7 +476,7 @@ html, body{
 	color: #85b23d;
 }
 .ubicacion_button .icon{
-	background: url(../images/ubicacion_icon01.png);
+	background: url('../images/ubicacion_icon01.png');
 	width: 20px;
 	height: 35px;
 	display: block;
@@ -497,7 +505,7 @@ html, body{
 	color: #85b23d;
 }
 .more_button .icon{
-	background: url(../images/ubicacion_icon01.png);
+	background: url('../images/ubicacion_icon01.png');
 	width: 20px;
 	height: 35px;
 	display: block;
