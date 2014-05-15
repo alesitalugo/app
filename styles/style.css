@@ -2,29 +2,54 @@ html, body{
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-color:#6999c7 ;
-	background-image: url('../images/nubes.png');
+	background-color:#a5c2dd;
+	background-image: url('../images/new/background01.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: cover;
 }
 #branches-top{
-	background-image: url('../images/plantas_superiores.png');
+	/*background-image: url('../images/plantas_superiores.png');
 	height: 122px;
 	background-size: cover;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 0;
-	width: 100%;
+	width: 100%;*/
 }
 #header-logo{
-	width: 650px;
-	background-color: rgba(255, 255, 255, 0.44);
-	height: 116px;
+	width: 874px;
+	background: url('../images/new/backHeader01.png');
+	height: 173px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
+	background-repeat: no-repeat;
+}
+#header-logo a {
+	width: 266px;
+	height: 119px;
+	margin: 0 auto;
+	display: block;
+	padding-top: 25px;
+}
+.plant-left{
+	width: 40%;
+	height: 107px;
+	background: url('../images/new/plantsLeft01.png');
+	left: -40px;
+	position: absolute;
+	background-position: 245px 0px;
+}
+.plant-right{
+	width: 40%;
+	height: 107px;
+	background: url('../images/new/plantsRight01.png');
+	right: 0;
+	position: absolute;
+background-position: 245px 0px;
 }
 #wrap {
 	width: 100%;
@@ -56,7 +81,8 @@ html, body{
 	padding: 10px;
 	position: absolute;
 	right: 0;
-	margin: 20px;
+	margin: 0px 20px;
+	top: 6%;
 }
 #header .nav{
 	margin: 0;
@@ -98,8 +124,7 @@ html, body{
 
 }
 #header .nav .menu-item .link-menu .icon{
-	background: url('../images/icon01.png') no-repeat;
-	background-position: center;
+	margin: 0 auto;
 	width: 50px;
 	height: 50px;
 	display: block;
@@ -112,14 +137,20 @@ html, body{
 	right: 0;
 	z-index: 1;
 }
+#header .nav .menu-item .link-menu .icon i{
+	width: 30px;
+	height: 35px;
+	background-image: url('../images/new/sprite01.png');
+	display: block;	
+}
 #header .nav .menu-item .link-menu p{
 	position: absolute;
-	left: -16px;
+	left: -44px;
 	height: 50px;
 	padding: 0;
 	margin: 0;
 	border-radius: 25px 0px 0px 25px;
-	width: 153px;
+	width: 180px;
 	padding: 0 5px;
 	position: relative;
 	z-index: 0;
@@ -136,6 +167,11 @@ html, body{
 #menu-estado .icon{
 	background-color: #85b23d !important;
 }	
+#menu-estado .icon i{
+	background-position: -8px -10px;
+		margin: 13px;
+
+}
 #menu-estado p{
 	background-color: #85b23d !important;
 }
@@ -144,6 +180,11 @@ html, body{
 }
 #menudos .icon{
 	background-color: #669900 !important;
+}
+#menudos .icon i {
+	background-position: -43px -8px;
+		margin: 12px 15px;
+
 }
 #menudos p{
 	background-color: #669900 !important;
@@ -154,6 +195,10 @@ html, body{
 #menutres .icon{
 	background-color: #5c8608 !important;
 }
+#menutres .icon i {
+	background-position: -84px -13px;
+	margin: 13px;
+}
 #menutres p{
 	background-color: #5c8608 !important;
 }
@@ -162,6 +207,10 @@ html, body{
 }
 #menucuatro .icon{
 	background-color: #5c8704 !important;
+}
+#menucuatro .icon i {
+	background-position: -128px -10px;
+	margin: 9px;
 }
 #menucuatro p{
 	background-color: #5c8704 !important;
@@ -172,6 +221,10 @@ html, body{
 #menucinco .icon{
 	background-color: #486b03 !important;
 }
+#menucinco .icon i {
+	background-position: -172px -14px;
+	margin: 15px;
+}
 #menucinco p{
 	background-color: #486b03 !important;
 }
@@ -181,6 +234,10 @@ html, body{
 #menuseis .icon{
 	background-color: #3e5908 !important;
 }
+#menuseis .icon i {
+	background-position: -211px -10px;
+	margin: 9px;
+}
 #menuseis p{
 	background-color: #3e5908 !important;
 }
@@ -189,6 +246,10 @@ html, body{
 }
 #menusiete .icon{ 
 	background-color: #324905 !important;
+}
+#menusiete .icon i {
+	background-position: -258px -10px;
+	margin: 13px 11px;
 }
 #menusiete p{
 	background-color: #324905 !important;
@@ -202,34 +263,53 @@ html, body{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	z-index: 10;
 }
 .nav_menu{
 	width: 940px;
 	margin: 0 auto;
 	position: relative;
-	height: 50px;
+	height: 30px;
 }
 .nav_menu .arrow{
-	height: 20px;
-	width: 20px;
+	width: 78px;
+	height: 78px;
 	position: absolute;
+	top: -35px;	
 	cursor: pointer;
+	background: url('../images/new/sprite01.png') no-repeat;	
 }
 #prev{
 	left: 0;
-	top:-10px;
+	background-position: -5px -99px;
 }
 #next{
 	right: 0;
-	top: -10px;
+	background-position: -91px -100px;
+}
+.assets-footer{
+	position: relative;
+	z-index: 11;
 }
 #logo{
 	margin: 0 auto;
-	width: 300px;
-	background-color: white;
+	width: 328px;
+	background: url(../images/new/backLogo01.png);
 	position: relative;
-	top: -50px;
-	height: 100px;
+	top: -64px;
+	height: 198px;
+	z-index: -1;
+}
+#logo a {
+	width: 73px;
+	height: 49px;
+	margin: 0px auto;
+	text-align: center;
+	display: block;
+	padding-top: 15px;
+}
+#logo a img {
+
 }
 #round {
 	position: relative;
@@ -238,16 +318,16 @@ html, body{
 }
 .grass{
 	background: url('../images/pasto01.png');
-	width: 980px;
+	width: 986px;
 	height: 801px;
 	position: fixed;
-	bottom: -468px;
+	bottom: -550px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 #page_menu{
 	margin: 0 auto;
-	width: 350px;
+	width: 360px;
 	padding: 0;
 	height: 50px;
 	text-align: center;
@@ -256,6 +336,28 @@ html, body{
 	float: left;
 	margin:0px  20px;
 	list-style-type: none;
+}
+#page_menu .page-item span.icon{
+	display: block;
+	width: 36px;
+	height: 36px;
+	background-image: url('../images/new/sprite01.png');	
+	margin: 0 auto;
+}
+#link_home .icon{
+	background-position:-9px -54px ;
+}
+#link_video .icon{
+	background-position:-56px -54px ;
+
+}
+#link_tips .icon{
+	background-position:-103px -56px ;
+
+}
+#link_desarrollo .icon {
+	background-position:-160px -54px;
+
 }
 #page_menu .page-item a{
 	text-align: center;
@@ -269,9 +371,10 @@ html, body{
 }
 #external_links{
 	width: 960px;
-	margin: 0 auto;
+	margin: 20px auto 0px;
 	text-align: center;
 	padding: 0;
+	clear: both;
 }
 #external_links .external_item{
 	margin: 0 10px;
@@ -325,7 +428,7 @@ html, body{
 	text-align: left;
 }
 .table-content{
-	background-color: rgb(209, 220, 226);
+	background-color: rgba(139, 163, 166, 0.25);
 	border-radius: 0px 0px 20px 20px;
 	padding: 0px 20px;
 	width: 300px;
@@ -523,4 +626,42 @@ html, body{
 	position: relative;
 	width: 840px;
 	margin: 0 auto;
+}
+
+.text-tipovivienda{
+
+}
+.text-tipovivienda p{
+	background-color: #85b23d !important;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	border-radius:  0px 25px 25px 0px ;
+	width: 153px;
+	padding: 0 5px;
+	z-index: 0;
+	line-height: 48px;
+	color: #fff;
+}
+.caracteristicas{
+	margin: 10px auto;
+	text-align: center;
+	width: 410px;
+	height: 75px;
+}
+.info-caracteristicas{
+	width: 520px;
+	clear: both;
+	margin: 10px auto;
+}
+.map-caracteristicas{
+	clear: both;
+	float: right;
+	width: 370px;
+}
+.tipo-caracteristica{
+	float: right;
+	width: 135px;
+	position: relative;
+	top: 65px;
 }
