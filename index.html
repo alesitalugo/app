@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <link rel="stylesheet" type="text/css" href="styles/jquery.rollbar.css">
+        <link rel="stylesheet" type="text/css" href="font/stylesheet.css">
         <!-- endbuild -->
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
@@ -83,14 +84,14 @@
                 
                 <div class="section-row" id="maincontainer" data-sections="12">
 
-                    <!--MOCKUP PANTALLA01-->
+                    <!--MOCKUP PANTALLA01 portada-->
                     <section id="home" class="section">
                         <div class="content">
-                            <img src="images/index01.png">
+                            <img src="images/new/home01.png">
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 02 -->
+                    <!-- MOCKUP PANTALLA 02 estado-->
                     <section id="section_one" class="section">
                         <div class="content">
                             <img src="images/section02.png">                    
@@ -98,12 +99,12 @@
                     </section>
 
                     
-                    <!-- MOCKUP PANTALLA 03 -->
+                    <!-- MOCKUP PANTALLA 03 municipio-->
 
-                    <section id="section_two" class="section activa ">
+                    <section id="section_two" class="section ">
                         <div class="content">
                             <div class="column">
-                                <img src="images/map01.png">
+                                <img src="images/new/map01.png">
                             </div>
                             <div class="column">
                                 <div class="data-table">
@@ -135,7 +136,7 @@
                                                     <p><a href="#">Allende</a></p>
                                                 </div> 
                                                 <div class="item-column">
-                                                    <p>calificada º</p>
+                                                    <p>calificada</p>
                                                 </div> 
                                             </div>
                                             <div class="item-row">
@@ -166,18 +167,55 @@
                     </section>
                     
 
-                    <!-- MOCKUP PANTALLA 04 -->
+                    <!-- MOCKUP PANTALLA 04 selecciona la calificación -->
 
                     <section id="section_three" class="section">
                         <div class="content">
-                            
+                            <ul class="botones_calificacion">
+                                <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="a">
+                                        <span class="selected on"></span>
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="b">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="c">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="d">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="e">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="f">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="g">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
 
-                    <!-- MOCKUP PANTALLA 05 -->
+                    <!-- MOCKUP PANTALLA 05 rango de precio-->
 
-                    <section id="section_four" class="section ">
+                    <section id="section_four" class="section">
                         <div class="content">
                             <div class="price_list">
                                 <a href="" class="price_item">
@@ -238,50 +276,53 @@
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 06 TIPO DE VIVIENDA incomplete-->
+                    <!-- MOCKUP PANTALLA 06 tipo de vivienda-->
 
-                    <section id="section_five" class="section">
+                    <section id="section_five" class="section ">
                         <div class="content">
-                            <div class="tipodevivienda tipo_01">
-                                <div class="item-tipovivienda">
-                                    <div class="image-tipovivienda">
-                                        <img src="">
-                                    </div>
-                                    <div class="text-tipovivienda">                                        
-                                        <p>Vertical</p>
-                                    </div>
+                            <div class="tipodevivienda ">
+                                <div class="item-tipovivienda"  id="tipo_vertical">
+                                    <a href="">
+                                        <div class="image-tipovivienda">
+                                        </div>
+                                        <div class="text-tipovivienda">                                        
+                                            <p>Vertical</p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="item-tipovivienda tipo_02">
-                                    <div class="image-tipovivienda">
-                                        <img src="">
-                                    </div>
-                                    <div class="text-tipovivienda">                                        
-                                        <p>Adosada</p>
-                                    </div>
+                                <div class="item-tipovivienda tipo_02" id="tipo_adosada">
+                                    <a href="">
+                                        <div class="image-tipovivienda" >
+                                        </div>
+                                        <div class="text-tipovivienda">                                         
+                                            <p>Adosada</p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="item-tipovivienda tipo_03">
-                                    <div class="image-tipovivienda">
-                                        <img src="">
-                                    </div>
-                                    <div class="text-tipovivienda">                                        
-                                        <p>Aislada</p>
-                                    </div>
+                                <div class="item-tipovivienda tipo_03" id="tipo_aislada">
+                                    <a href="">
+                                        <div class="image-tipovivienda" >
+                                        </div>
+                                        <div class="text-tipovivienda">                                         
+                                            <p>Aislada</p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 07 -->
+                    <!-- MOCKUP PANTALLA 07 resultados [tabla]-->
 
 
-                    <section id="section_six" class="section">
+                    <section id="section_six" class="section ">
                         <div class="content">
                             <div class="content_table">
                                 <table id="calificacion_table">
                                     <thead class="table-header">
                                         <tr>
                                             <td>Calificación</td>
-                                            <td>Tipo de vivienda</td>
+                                            <td></td>
                                             <td>Descripción</td>
                                             <td>Precio</td>
                                         </tr>
@@ -553,18 +594,97 @@
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 08 RESULTADOS [GRÁFICA REDONDA] -->
+                    <!-- MOCKUP PANTALLA 08 RESULTADOS [GRÁFICA REDONDA]  [falta]-->
 
 
-                    <section id="section_seven" class="section ">
+                    <section id="section_seven" class="section  activa">
                         <div class="content">
-                            
+                            <div class="select_calf">
+                                <ul class="botones_calificacion">
+                                <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="a">
+                                        <span class="selected on"></span>
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="b">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="c">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="d">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="e">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="f">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+                                 <li class="item_calf">
+                                    <a href="#" class="selected_calf" id="g">
+                                        <span class="selected"></span>                                        
+                                    </a>
+                                </li>
+
+                            </ul>
+                            </div>
+                            <div id="canvas">
+                                <div class="round_graphic" id="graphic_design">
+                                    <h3>Eficiencia del diseño arquitectónico</h3>
+                                    <div class="circle" id="circles-1" data-percent="22">           
+                                    </div>
+                                    <p>Ahorro energía electricidad y gas</p>            
+                                </div>
+                                <div class="round_graphic" id="graphic_energy">
+                                    <h3>Consumo <br>Energético</h3>
+                                    <div class="circle" id="circles-2" data-percent="50">
+                                    </div>
+                                    <p>Ahorro de energía</p>
+                                </div>
+                                <div class="round_graphic" id="graphic_water">
+                                    <h3>Consumo <br>de Agua</h3>
+                                    <div class="circle" id="circles-3" data-percent="18">
+                                    </div>
+                                    <p>Ahorro de agua</p>
+                                </div>
+                                <div class="round_graphic" id="graphic_emisiones">
+                                    <h3>Emisiones<br>de CO2</h3>
+                                    <div class="circle" id="circles-4" data-percent="0">
+                                    </div>
+                                    <div class="info_circle">
+                                        <p class="number">123 <span>km/m2</span></p>
+                                        <span>Ton CO2 / año</span>
+                                    </div>
+                                </div>
+
+                                <div class="round_graphic" id="graphic_save">
+                                    <h3>Ahorro mensual <br>en pesos</h3>
+                                    <div class="circle" id="circles-5" data-percent="0">
+                                    </div>
+                                    <div class="info_circle">
+                                        <p class="price">$101.0</p>
+                                        <span>Pesos Aproximado</span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </section>
                     
-                    <!-- MOCKUP PANTALLA 09   -->
+                    <!-- MOCKUP PANTALLA 09  características -->
 
-                    <section id="section_eight" class="section">
+                    <section id="section_eight" class="section ">
                         <div class="content">
                             <div class="caracteristicas">
                                 <div class="info_vivienda construccion_info">
@@ -583,7 +703,7 @@
                                      <span class="info">
                                         2
                                     </span>
-                                    <p>recamaras</p>
+                                    <p>recmaras</p>
                                 </div>
                                 <div class="info_vivienda  banios_info">
                                     <span class="icon">
@@ -617,16 +737,111 @@
                     
                     <!-- MOCKUP PANTALLA 10 MATERIALES Y CONSTRUCCIÓN -->
 
-                    <section id="section_nine" class="section">
+                    <section id="section_nine" class="section ">
                         <div class="content">
-                    
+                            <div class="materiales">
+                                <img src="images/new/materiales01.png">
+                                <div class="buttons">
+                                    <a href="#" class="buttons_item techo">
+                                        <span class="icon"></span>
+                                        <p>Techo</p>
+                                    </a>
+                                    <a href="#" class="buttons_item muros">
+                                        <span class="icon"></span>
+                                        <p>Muros y puertas</p>
+                                    </a>
+                                    <a href="#" class="buttons_item piso">
+                                        <span class="icon"></span>
+                                        <p>Piso</p>
+                                    </a>
+                                    <a href="#" class="buttons_item ventanas">
+                                        <span class="icon"></span>
+                                        <p>Ventanas</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 11 MODAL AGUA-->
+                    <!-- MOCKUP PANTALLA 11 MODAL AGUA -->
 
-                    <section id="section_ten" class="section">
-                        <div class="content">
+                    <section id="section_ten" class="section ">
+                        <div class="content">   
+                            <div id="modal_box" class="modal_box">
+                                <div class="container_modal">
+                                    <div class="content_modal">
+                                        <a href="#" id="close_modal"></a>                                    
+                                        <div class="modal_title">
+                                            <h2>AGUA</h2>
+                                            <p>Ahorro mensual con base en la zona bioclimatica : CALIDO SEMIHUMEDO</p>
+                                        </div>
+                                       
+                                        <div class="data-table" id="modal_table">
+                                            <div class="table-header">
+                                                <div class="item-row">
+                                                    <div class="item-column item_one">
+                                                        <p>Imágen</p>
+                                                    </div>
+                                            
+                                                    <div class="item-column item_two">
+                                                        <p>Ecotecnología</p>
+                                                    </div>
+                                                    <div class="item-column item_three">
+                                                        <p>Ahorro mensual</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-content" id="table_one">
+                                                <div class="items-table">
+                                                    <div class="item-row">
+                                                        <div class="item-column item_one">
+                                                            <div class="circle">
+                                                                <img src="images/new/imagen01.png" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-column item_two">
+                                                            <p >Una regadera grado ecológico con    dispositivo ahorrador integrado</p>
+                                                        </div>
+                                                        <div class="item-column item_three">
+                                                            <p>$7.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                <div class="items-table">
+                                                    <div class="item-row">
+                                                        <div class="item-column item_one">
+                                                            <div class="circle">
+                                                                <img src="images/new/imagen01.png" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-column item_two">
+                                                            <p >Una regadera grado ecológico con    dispositivo ahorrador integrado</p>
+                                                        </div>
+                                                        <div class="item-column item_three">
+                                                            <p>$7.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                <div class="items-table">
+                                                    <div class="item-row">
+                                                        <div class="item-column item_one">
+                                                            <div class="circle">
+                                                                <img src="images/new/imagen01.png" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-column item_two">
+                                                            <p >Una regadera grado ecológico con    dispositivo ahorrador integrado</p>
+                                                        </div>
+                                                        <div class="item-column item_three">
+                                                            <p>$7.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     
                         </div>
                     </section>
@@ -634,9 +849,55 @@
                     <!-- MOCKUP PANTALLA 12 MODAL TIPS -->
 
 
-                    <section id="section_eleven" class="section">
+                    <section id="section_eleven" class="section ">
                         <div class="content">
-                    
+                           <div id="modal_box" class="modal_box modal_tip">
+                                <div class="container_modal">
+                                    <div class="content_modal">
+                                        <a href="#" id="close_modal"></a>
+                                        <ul id="modal_nav">
+                                            <li class="modal_nav_item">
+                                                <a href="#" class="modal_button active" id="agua_modal">
+                                                <!--<span class="guide_active"></span>-->
+                                                    agua
+                                                </a>
+                                            </li>
+                                            <li class="modal_nav_item">
+                                                <a href="#" class="modal_button" id="gas_modal">
+                                                    gas
+                                                </a>
+                                            </li>
+                                            <li class="modal_nav_item">
+                                                <a href="#" class="modal_button" id="salud_modal">
+                                                    salud
+                                                </a>
+                                            </li>
+                                            <li class="modal_nav_item">
+                                                <a href="#" class="modal_button" id="luz_modal">
+                                                    luz
+                                                </a>
+                                            </li>
+                                        </ul>                                   
+                                        <div class="modal_title">
+                                            <h2>TiPS</h2>
+                                            <div class="description_tip">
+                                                <p>Inst. Hidraulica</p>
+                                            </div>
+                                        </div>
+                                       
+                                        <div id="tip_content">
+                                            <div class="tip_content">
+                                                <div class="text_tip">
+                                                <p>Revisa que la instalación de hidráulica de tu vivienda no presente fugas o deterioro en las tuberías. -Conoce tu consumo actual de agua y contrástalo con el consumo domestico promedio por habitante para tu localidad, te servirá para saber que tan buenos o malos son tus hábitos de consumo. -Si has aplicado medidas de ahorro, verifica tu consumo mensual con los recibos de agua para saber si las medidas que tomaste son las correctas</p>
+                                            </div>
+                                            <div class="tip_image">
+                                                <img src="images/new/tips01.png">
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -722,22 +983,31 @@
                     </ul>
                 </div>
             </div>
-
-        </div>
-
-
-    
+        </div>    
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>-->
-       
-        
         <script src="scripts/util.js"></script>
-       
         <script src="scripts/main.js"></script>
         <script type="text/javascript">
-            $('.table-content, .content_table').rollbar();
+            $('.table-content, .content_table, .tip_content').rollbar();
+            var colors = [
+                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
+            ];
 
+            for (var i = 1; i <= 5; i++) {
+                var child = document.getElementById('circles-' + i),
+                    percentage = child.dataset.percent;
+                    
+                Circles.create({
+                    id:         child.id,
+                    percentage: percentage,
+                    radius:     60,
+                    width:      10,
+                    number:     percentage ,
+                    text:       '%',
+                    colors:     colors[i - 1]
+                });
+            }
         </script>
 </body>
 </html>
