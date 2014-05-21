@@ -12,6 +12,28 @@ html, body{
 #branches-top{
 	
 }
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 #header-logo{
 	width: 874px;
 	background: url('../images/new/backHeader01.png');
@@ -21,6 +43,13 @@ html, body{
 	z-index: 1;
 	background-repeat: no-repeat;
 }
+#go_init{
+	background: url('../images/new/sprite01.png') no-repeat -209px -53px;
+	width: 33px;
+	height: 33px;
+	display: block;
+	margin: 20px auto;
+}
 #header-logo a {
 	width: 266px;
 	height: 119px;
@@ -29,20 +58,28 @@ html, body{
 	padding-top: 25px;
 }
 .plant-left{
-	width: 40%;
+	/*width: 40%;
 	height: 107px;
 	background: url('../images/new/plantsLeft01.png');
 	left: -40px;
 	position: absolute;
+	background-position: 245px 0px;*/
+}
+#branches-top{
+	width: 100%;
+	height: 107px;
+	background: url('../images/new/plantsLeft01.png');
+	left: 0px;
+	position: absolute;
 	background-position: 245px 0px;
 }
 .plant-right{
-	width: 40%;
+	/*width: 40%;
 	height: 107px;
 	background: url('../images/new/plantsRight01.png');
 	right: 0;
 	position: absolute;
-	background-position: 245px 0px;
+	background-position: 245px 0px;*/
 }
 #wrap {
 	width: 100%;
@@ -55,6 +92,8 @@ html, body{
 	width: 980px;
 	margin: 0 auto;
 	height: 500px;
+	top:-730px;
+	position: relative;
 }
 .section {
 	display: none;
@@ -63,7 +102,7 @@ html, body{
 	display: block;
 }
 .section .content{
-	margin: 15px auto;
+	margin: 0 auto;
 	text-align: center;
 }
 .section .content .column{
@@ -71,10 +110,10 @@ html, body{
 }
 #header{
 	float: right;
-	padding: 10px;
+	padding: 10px 5px;
 	position: absolute;
 	right: 0;
-	margin: 0px 20px;
+	margin: 0px 0px 0px 0px;
 	top: 6%;
 }
 #header .nav{
@@ -309,12 +348,29 @@ html, body{
 	width: 980px;
 	margin: 0 auto;
 }
+.title_section{
+	background: url(../images/new/bgTitle01.png);
+	width: 1002px;
+	height: 961px;
+	position: fixed;
+	bottom: -625px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.name{
+	margin: 0 auto;
+	position: relative;
+	top: 20px;
+	left: 0px;
+	width: 650px;
+	text-align: center;
+}
 .grass{
 	background: url('../images/pasto01.png');
 	width: 986px;
 	height: 801px;
 	position: fixed;
-	bottom: -550px;
+	bottom: -530px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -664,7 +720,7 @@ html, body{
 	padding: 0;
 }
 .content_table {
-	height: 500px;
+	height: 420px;
 	position: relative;
 	width: 840px;
 	margin: 0 auto;
@@ -845,9 +901,9 @@ a.buttons_item {
 }
 .buttons_item .icon{
 	display: block;
-	background: url('../images/new/sprite01.png') no-repeat -251px -92px;
-	width: 35px;
-	height: 35px;
+	background: url('../images/new/sprite01.png') no-repeat  -247px -131px;
+	width: 36px;
+	height: 36px;
 	display: block;
 	position: absolute;
 	left: -75px;
@@ -1080,207 +1136,226 @@ color: #496b04;
 
 .select_calf{
 	float: left;
-	width: 240px;
+	width: 200px;
+}
+.select_calf .botones_calificacion{
+	padding: 0px;
+	margin: 20px 0px;
 }
 #canvas{
-		float: right;
-			width: 735px;
-			font-family: 'nilland-smallcapsbold';
-		}
-		#canvas .circle {
-			display: inline-block;
-			margin: 1em;
-			width: 230px;
-			position: relative;
-		}
-		.circle .icon {
-			background: url(../images/new/sprite01.png) ;
-			display: block;
-			position: absolute;
-			left: 20%;
-			top: 30%;		
-		}
-		 #circles-1 .icon{
-			background-position: -72px -223px;
-			width: 23px;
-			height: 47px;
-		}
-		#circles-2 .icon {
-			background-position: -163px -224px;
-			width: 27px;
-			height: 46px;
-		}
-		#circles-3 .icon{
-			background-position: -196px -227px;
-			width: 29px;
-			height: 39px;
-		}
-		.circles-text-wrp{
-			
-		}
-		.circles-text-wrp .circles-number{
-			position: relative;
-			color: #fff;
-			top: 5px;
-			left: 0;
-			font-size: 34px;
-		}
-		.circles-text-wrp .circles-text{
-			position: relative;
-			color: #fff;
-			top: 10px;
-			left: 5px;
-			font-size: 22px;
-		}
-		#circles-1  .circles-text-wrp{
-			background: url('../images/new/calificacion.png') -280px -8px;
-			width: 110px;
-			height: 68px;
-		}
-		#circles-2  .circles-text-wrp{
-			background: url('../images/new/calificacion.png') -287px -245px;
-			width: 108px;
-			height: 57px;
-		}
-		#circles-3  .circles-text-wrp{
-			background: url('../images/new/calificacion.png') -287px -175px;
-			width: 98px;
-			height: 57px;
-		}
-		.circles svg{
-			float: left;
-		}
-		.circles-text-wrp{
-			float: right;
-			margin-top: 30px;
-		}
-		.round_graphic{
-			width: 240px;
-			float: left;
-			position: relative;
-		}
-		.round_graphic h3{
-			font-size: 14px;
-			width: 160px;
-			position: absolute;
-			text-align: left;
-			margin: 5px;
-		}
-		.round_graphic p{
-			width: 113px;
-			position: absolute;
-			text-align: center;
-			font-size: 12px;
-			top: 100px;
-		}
-		#graphic_design  h3, #graphic_design p  {
-			color: #b5b52f;
-			left: 130px;
-		}
-		#graphic_energy h3,#graphic_energy  p  {
-			color: #ff9900;
-			left: 140px;
-		}
-		#graphic_water h3, #graphic_water p  {
-			color: #66cccc;
-			left: 140px;
+	float: right;
+	width: 780px;
+	font-family: 'nilland-smallcapsbold';
+	position: relative;
+	right: 70px;
+}
+#canvas .circle {
+	display: inline-block;
+	margin: 1em;
+	width: 230px;
+	position: relative;
+}
+.circle .icon {
+	background: url(../images/new/sprite01.png) ;
+	display: block;
+	position: absolute;
+	left: 20%;
+	top: 30%;		
+}
+ #circles-1 .icon{
+	background-position: -72px -223px;
+	width: 23px;
+	height: 47px;
+}
+#circles-2 .icon {
+	background-position: -163px -224px;
+	width: 27px;
+	height: 46px;
+}
+#circles-3 .icon{
+	background-position: -196px -227px;
+	width: 29px;
+	height: 39px;
+}
+.circles-text-wrp{
+	
+}
+.circles-text-wrp .circles-number{
+	position: relative;
+	color: #fff;
+	top: 5px;
+	left: 0;
+	font-size: 34px;
+}
+.circles-text-wrp .circles-text{
+	position: relative;
+	color: #fff;
+	top: 10px;
+	left: 5px;
+	font-size: 22px;
+}
+#circles-1  .circles-text-wrp{
+	background: url('../images/new/calificacion.png') -280px -8px;
+	width: 110px;
+	height: 68px;
+}
+#circles-2  .circles-text-wrp{
+	background: url('../images/new/calificacion.png') -287px -245px;
+	width: 108px;
+	height: 57px;
+}
+#circles-3  .circles-text-wrp{
+	background: url('../images/new/calificacion.png') -287px -175px;
+	width: 98px;
+	height: 57px;
+}
+.circles svg{
+	float: left;
+}
+.circles-text-wrp{
+	float: right;
+	margin-top: 30px;
+}
+.round_graphic{
+	width: 245px;
+	float: left;
+	position: relative;
+}
+.round_graphic h3{
+	font-size: 14px;
+	width: 90px;
+	position: absolute;
+	text-align: right;
+	margin: 5px;
+}
+.round_graphic p{
+	width: 113px;
+	position: absolute;
+	text-align: center;
+	font-size: 12px;
+	top: 100px;
+}
+#graphic_design  h3{
+	color: #b5b52f;
+	left: 130px;
+	top: -15px;
+	width: 103px;
+}
+#graphic_design p  {
+	left: 130px;
+	color: #b5b52f;
+}
+#graphic_energy h3,#graphic_energy  p  {
+	color: #ff9900;
+	left: 140px;
+}
+#graphic_water h3, #graphic_water p  {
+	color: #66cccc;
+	left: 140px;
 
-		}
-		#graphic_emisiones {
-			width: 270px;
-			margin: 40px ;
-		}
-		#graphic_emisiones svg {
-			float: left;
-		}
-		#graphic_emisiones .info_circle{
-			background: url(../images/new/calificacion.png)-431px 0 ;
-			width: 145px;
-			height: 77px;
-			float: right;
-			margin-top: 30px;
-		}
-		#graphic_emisiones h3{
-			left: 170px;
-			margin: 0;
-			color: #e0e0e0;
-			top: -10px;
-		}
-		#graphic_emisiones p{
-			top: 0;
-			margin: 0 15px;
-			position: relative;
-			font-size: 36px;
-			color: #fff;
-			text-align: center;
-		}
-		#graphic_emisiones span{
-			font-size: 12px;
-			color: #fff;
-			margin: 0 15px;
-			text-align: right;
-		}
-		#graphic_save span{
-			font-size: 12px;
-			color: #fff;
-			text-align: right;
-		}
-		#graphic_save p{
-			top: 0;
-			margin: 0 15px;
-			position: relative;
-			font-size: 36px;
-			color: #fff;
-			text-align: center;
-		}
-		#graphic_emisiones .circles-text-wrp{
-			display: none;
-		}
-		#graphic_save{
-			width: 276px;
-			margin: 40px ;
-		}
-		#graphic_save h3{
-			left: 170px;
-			margin: 0;
-			color: #cc9900;
-			top: -10px;
-		}
-		#graphic_save .circle {
-			width: 121px;
-			margin: 0;
-		}
-		#graphic_emisiones .circle{
-			width: 121px;
-			margin: 0;
-		}
-		#graphic_save svg{
-			float: left;
+}
+#graphic_emisiones {
+	width: 270px;
+	margin: 40px ;
+}
+#graphic_emisiones svg {
+	float: left;
+}
+#graphic_emisiones .info_circle{
+	background: url(../images/new/calificacion.png)-431px 0 ;
+	width: 145px;
+	height: 77px;
+	float: right;
+	margin-top: 30px;
+}
+#graphic_emisiones h3{
+	left: 170px;
+	margin: 0;
+	color: #e0e0e0;
+	top: -10px;
+}
+#graphic_emisiones p{
+	top: 0;
+	margin: 0 15px;
+	position: relative;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+}
+#graphic_emisiones span{
+	font-size: 12px;
+	color: #fff;
+	margin: 0 15px;
+	text-align: right;
+	display: block;
+	clear: both;
+}
+#graphic_emisiones .number span{
+	float: right;
+	margin: 20px 0px 0px;
+}
+#graphic_save span{
+	font-size: 12px;
+	color: #fff;
+	text-align: right;
+}
+#graphic_save p{
+	top: 0;
+	margin: 0 15px;
+	position: relative;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+}
+#graphic_emisiones .circles-text-wrp{
+	display: none;
+}
+#graphic_save{
+	width: 276px;
+	margin: 40px ;
+}
+#graphic_save h3{
+	left: 115px;
+	margin: 0;
+	color: #cc9900;
+	top: -10px;
+	width: 140px;
+}
+#graphic_save .circle {
+	width: 121px;
+	margin: 0;
+}
+#graphic_emisiones .circle{
+	width: 121px;
+	margin: 0;
+}
+#graphic_save svg{
+	float: left;
 
-		}
-		#graphic_save .info_circle{
-			background: url(../images/new/calificacion.png) no-repeat -280px -84px ;
-			
-				width: 151px;
-			height: 77px;
-			float: right;
-			margin-top: 30px;
-		}
-		#graphic_save .circles-text-wrp{
-			display: none;
-		}
-		#circles-4 .icon{
-			background-position: -3px -227px;
-			width: 60px;
-			height: 39px;
-			margin: 0;
-			left: 28%;
-		}
-		#circles-5 .icon{
-			background-position:  -105px -220px;
-			width: 53px;
-			height: 53px;
-			margin: 0;
-			left: 28%;
-			top: 26%;
-		}
+}
+#graphic_save .info_circle{
+	background: url(../images/new/calificacion.png) no-repeat -280px -84px ;
+	
+		width: 151px;
+	height: 77px;
+	float: right;
+	margin-top: 30px;
+}
+#graphic_save .circles-text-wrp{
+	display: none;
+}
+#circles-4 .icon{
+	background-position: -3px -227px;
+	width: 60px;
+	height: 39px;
+	margin: 0;
+	left: 28%;
+}
+#circles-5 .icon{
+	background-position:  -105px -220px;
+	width: 53px;
+	height: 53px;
+	margin: 0;
+	left: 28%;
+	top: 26%;
+}

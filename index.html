@@ -9,13 +9,7 @@
         <title>round</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
+        
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <link rel="stylesheet" type="text/css" href="styles/jquery.rollbar.css">
@@ -25,52 +19,52 @@
     </head>
     <body>
         <div id="branches-top"></div>
-        <div class="plant-left"></div>        
-        <div class="plant-right"></div>
-        <div id="header-logo">
+        <div class="plant-left" style="display:none;" ></div>        
+        <div class="plant-right" style="display:none;" ></div>
+        <!--<div id="header-logo">
             <a href="#">
                 <img src="images/new/sisevive01.png">
             </a>
-        </div>
+        </div>-->
         <div id="header">
             <ul class="nav nav-pills pull-right">
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" id="menu-estado" class="link-menu">
                         <span class="icon"><i></i></span>
                         <p>estado</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menudos">
                         <span class="icon"><i></i></span>
                         <p>municipio</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menutres">
                         <span class="icon"><i></i></span>
                         <p>calificación</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menucuatro">
                         <span class="icon"><i></i></span>
                         <p>precio</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menucinco">
                         <span class="icon"><i></i></span>
                         <p>tipo de vivienda</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menuseis">
                         <span class="icon"><i></i></span>
                         <p>búsqueda</p>
                     </a>
                 </li>
-                <li class="menu-item menuon">
+                <li class="menu-item ">
                     <a href="" class="link-menu" id="menusiete">
                         <span class="icon"><i></i></span>
                         <p>resultados</p>
@@ -85,686 +79,31 @@
                 <div class="section-row" id="maincontainer" data-sections="12">
 
                     <!--MOCKUP PANTALLA01 portada-->
-                    <section id="home" class="section">
+                    <section id="home" class="section activa" data-section>
                         <div class="content">
-                            <img src="images/new/home01.png">
+                        <div class="animate_intro">
+                            <div class="item_left">
+                            </div>
+                            <div id="line" class="item_line">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
+
+  <path class="path" fill="#62A13D" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M159.064,7.24c-20.682,35.619-41.364,71.238-62.046,106.857c-28.071,48.346-56.143,96.691-84.214,145.036
+            c-2.247,3.869-4.493,7.738-6.74,11.607c-0.765,1.317,2.175,1.179,2.738,0.21c20.682-35.619,41.364-71.238,62.046-106.857
+            c28.071-48.346,56.143-96.691,84.214-145.036c2.246-3.869,4.492-7.738,6.739-11.607C162.567,6.133,159.627,6.271,159.064,7.24
+            L159.064,7.24z"/>
+  
+</svg>
+
+                            </div>
+                            <div class="item_right">
+                            </div>
+                        </div>
+                            <a href="estado.html" id="go_init"></a>
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 02 estado-->
-                    <section id="section_one" class="section">
-                        <div class="content">
-                            <img src="images/section02.png">                    
-                        </div>
-                    </section>
-
-                    
-                    <!-- MOCKUP PANTALLA 03 municipio-->
-
-                    <section id="section_two" class="section ">
-                        <div class="content">
-                            <div class="column">
-                                <img src="images/new/map01.png">
-                            </div>
-                            <div class="column">
-                                <div class="data-table">
-                                    <div class="table-header">
-                                        <div class="item-row">
-                                            <div class="item-column">
-                                                <p>Localidad</p>
-                                            </div>
-                                        
-                                            <div class="item-column">
-                                                <p>Vivienda calificada</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="table-content" id="table_one">
-                                        <div class="items-table">
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                   <p> <a href="#">Abasolo</a></p>
-                                                </div>
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p><a href="#">Agualenguas</a></p>                                         
-                                                </div>  
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p><a href="#">Allende</a></p>
-                                                </div> 
-                                                <div class="item-column">
-                                                    <p>calificada</p>
-                                                </div> 
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p>Anahuac</p>
-                                                </div>
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p>Apodaca</p>
-                                                </div>                                            
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p>Apodaca</p>
-                                                </div>                                            
-                                            </div>
-                                            <div class="item-row">
-                                                <div class="item-column">
-                                                    <p>Apodaca</p>
-                                                </div>                                            
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-
-                    <!-- MOCKUP PANTALLA 04 selecciona la calificación -->
-
-                    <section id="section_three" class="section">
-                        <div class="content">
-                            <ul class="botones_calificacion">
-                                <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="a">
-                                        <span class="selected on"></span>
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="b">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="c">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="d">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="e">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="f">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="g">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </section>
-
-
-                    <!-- MOCKUP PANTALLA 05 rango de precio-->
-
-                    <section id="section_four" class="section">
-                        <div class="content">
-                            <div class="price_list">
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$0</span> a <span class="price">$150,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$150,000.ºº</span> a <span class="price">$250,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$250,000.ºº</span> a <span class="price">$350,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$350,000.ºº</span> a <span class="price">$450,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$450,000.ºº</span> a <span class="price">$550,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$550,000.ºº</span> a <span class="price">$650,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$650,000.ºº</span> a <span class="price">$750,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$750,000.ºº</span> a <span class="price">$850,000.ºº</span>
-                                    </p>
-                                </a>
-                                <a href="" class="price_item">
-                                    <span class="go_link"></span>
-                                    <p>
-                                        de <span class="price">$850,000.ºº</span> a <span class="price">$950,000.ºº</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- MOCKUP PANTALLA 06 tipo de vivienda-->
-
-                    <section id="section_five" class="section ">
-                        <div class="content">
-                            <div class="tipodevivienda ">
-                                <div class="item-tipovivienda"  id="tipo_vertical">
-                                    <a href="">
-                                        <div class="image-tipovivienda">
-                                        </div>
-                                        <div class="text-tipovivienda">                                        
-                                            <p>Vertical</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item-tipovivienda tipo_02" id="tipo_adosada">
-                                    <a href="">
-                                        <div class="image-tipovivienda" >
-                                        </div>
-                                        <div class="text-tipovivienda">                                         
-                                            <p>Adosada</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item-tipovivienda tipo_03" id="tipo_aislada">
-                                    <a href="">
-                                        <div class="image-tipovivienda" >
-                                        </div>
-                                        <div class="text-tipovivienda">                                         
-                                            <p>Aislada</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- MOCKUP PANTALLA 07 resultados [tabla]-->
-
-
-                    <section id="section_six" class="section ">
-                        <div class="content">
-                            <div class="content_table">
-                                <table id="calificacion_table">
-                                    <thead class="table-header">
-                                        <tr>
-                                            <td>Calificación</td>
-                                            <td></td>
-                                            <td>Descripción</td>
-                                            <td>Precio</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="body_table">
-                                        <tr>
-                                            <td class="calf_column">
-                                                <img src="images/e01.png">
-                                            </td>
-                                            <td class="tipo_column">
-                                                <img src="images/casi01.png">
-                                                <a href="" class="button ubicacion_button">
-                                                    <span class="icon">
-                                                        
-                                                    </span>
-                                                    <p>ubicación</p>
-                                                </a>
-                                            </td>
-                                            <td class="descripcion_column">
-                                                <h6 class="address">Turmalina #102, Los Heroes Monterrey, 012, Nuevo Leon</h6>
-                                                <p class="description">
-                                                    Donec sit amet arcu ac tellus dapibus posuere a et purus. Pellentesque blandit nibh enim, at hendrerit turpis pretium ac. Ut suscipit orci a tellus blandit volutpat. 
-                                                </p>
-                                                <div class="assets">
-                                                     <div class="info_vivienda construccion_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            432.1
-                                                        </span>
-                                                        <p>construcción</p>
-                                                    </div>
-                                                    <div class="info_vivienda  recamaras_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            2
-                                                        </span>
-                                                        <p>recamaras</p>
-                                                    </div>
-                                                    <div class="info_vivienda  banios_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>baños</p>
-                                                    </div>   
-                                                    <div class="info_vivienda estacionamiento_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>estacionamiento</p>
-                                                    </div>   
-                                                </div>
-                                            </td>
-                                            <td class="precio_column">
-                                                <p>$698,00.ºº</p>
-                                                <a href="" class="more_button">
-                                                    <span class="icon"></span>
-                                                    <p>ver detalle</p>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="calf_column">
-                                                <img src="images/e01.png">
-                                            </td>
-                                            <td class="tipo_column">
-                                                <img src="images/casi01.png">
-                                                <a href="" class="button ubicacion_button">
-                                                    <span class="icon">
-                                                        
-                                                    </span>
-                                                    <p>ubicación</p>
-                                                </a>
-                                            </td>
-                                            <td class="descripcion_column">
-                                                <h6 class="address">Turmalina #102, Los Heroes Monterrey, 012, Nuevo Leon</h6>
-                                                <p class="description">
-                                                    Donec sit amet arcu ac tellus dapibus posuere a et purus. Pellentesque blandit nibh enim, at hendrerit turpis pretium ac. Ut suscipit orci a tellus blandit volutpat. 
-                                                </p>
-                                                <div class="assets">
-                                                     <div class="info_vivienda construccion_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            432.1
-                                                        </span>
-                                                        <p>construcción</p>
-                                                    </div>
-                                                    <div class="info_vivienda  recamaras_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            2
-                                                        </span>
-                                                        <p>recamaras</p>
-                                                    </div>
-                                                    <div class="info_vivienda  banios_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>baños</p>
-                                                    </div>   
-                                                    <div class="info_vivienda estacionamiento_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>estacionamiento</p>
-                                                    </div>   
-                                                </div>
-                                            </td>
-                                            <td class="precio_column">
-                                                <p>$698,00.ºº</p>
-                                                <a href="" class="more_button">
-                                                    <span class="icon"></span>
-                                                    <p>ver detalle</p>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="calf_column">
-                                                <img src="images/e01.png">
-                                            </td>
-                                            <td class="tipo_column">
-                                                <img src="images/casi01.png">
-                                                <a href="" class="button ubicacion_button">
-                                                    <span class="icon">
-                                                        
-                                                    </span>
-                                                    <p>ubicación</p>
-                                                </a>
-                                            </td>
-                                            <td class="descripcion_column">
-                                                <h6 class="address">Turmalina #102, Los Heroes Monterrey, 012, Nuevo Leon</h6>
-                                                <p class="description">
-                                                    Donec sit amet arcu ac tellus dapibus posuere a et purus. Pellentesque blandit nibh enim, at hendrerit turpis pretium ac. Ut suscipit orci a tellus blandit volutpat. 
-                                                </p>
-                                                <div class="assets">
-                                                     <div class="info_vivienda construccion_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            432.1
-                                                        </span>
-                                                        <p>construcción</p>
-                                                    </div>
-                                                    <div class="info_vivienda  recamaras_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            2
-                                                        </span>
-                                                        <p>recamaras</p>
-                                                    </div>
-                                                    <div class="info_vivienda  banios_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>baños</p>
-                                                    </div>   
-                                                    <div class="info_vivienda estacionamiento_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>estacionamiento</p>
-                                                    </div>   
-                                                </div>
-                                            </td>
-                                            <td class="precio_column">
-                                                <p>$698,00.ºº</p>
-                                                <a href="" class="more_button">
-                                                    <span class="icon"></span>
-                                                    <p>ver detalle</p>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="calf_column">
-                                                <img src="images/e01.png">
-                                            </td>
-                                            <td class="tipo_column">
-                                                <img src="images/casi01.png">
-                                                <a href="" class="button ubicacion_button">
-                                                    <span class="icon">
-                                                        
-                                                    </span>
-                                                    <p>ubicación</p>
-                                                </a>
-                                            </td>
-                                            <td class="descripcion_column">
-                                                <h6 class="address">Turmalina #102, Los Heroes Monterrey, 012, Nuevo Leon</h6>
-                                                <p class="description">
-                                                    Donec sit amet arcu ac tellus dapibus posuere a et purus. Pellentesque blandit nibh enim, at hendrerit turpis pretium ac. Ut suscipit orci a tellus blandit volutpat. 
-                                                </p>
-                                                <div class="assets">
-                                                     <div class="info_vivienda construccion_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            432.1
-                                                        </span>
-                                                        <p>construcción</p>
-                                                    </div>
-                                                    <div class="info_vivienda  recamaras_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            2
-                                                        </span>
-                                                        <p>recamaras</p>
-                                                    </div>
-                                                    <div class="info_vivienda  banios_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                         <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>baños</p>
-                                                    </div>   
-                                                    <div class="info_vivienda estacionamiento_info">
-                                                        <span class="icon">
-                                                            
-                                                        </span>
-                                                        <span class="info">
-                                                            1
-                                                        </span>
-                                                        <p>estacionamiento</p>
-                                                    </div>   
-                                                </div>
-                                            </td>
-                                            <td class="precio_column">
-                                                <p>$698,00.ºº</p>
-                                                <a href="" class="more_button">
-                                                    <span class="icon"></span>
-                                                    <p>ver detalle</p>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- MOCKUP PANTALLA 08 RESULTADOS [GRÁFICA REDONDA]  [falta]-->
-
-
-                    <section id="section_seven" class="section  activa">
-                        <div class="content">
-                            <div class="select_calf">
-                                <ul class="botones_calificacion">
-                                <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="a">
-                                        <span class="selected on"></span>
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="b">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="c">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="d">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="e">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="f">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-                                 <li class="item_calf">
-                                    <a href="#" class="selected_calf" id="g">
-                                        <span class="selected"></span>                                        
-                                    </a>
-                                </li>
-
-                            </ul>
-                            </div>
-                            <div id="canvas">
-                                <div class="round_graphic" id="graphic_design">
-                                    <h3>Eficiencia del diseño arquitectónico</h3>
-                                    <div class="circle" id="circles-1" data-percent="22">           
-                                    </div>
-                                    <p>Ahorro energía electricidad y gas</p>            
-                                </div>
-                                <div class="round_graphic" id="graphic_energy">
-                                    <h3>Consumo <br>Energético</h3>
-                                    <div class="circle" id="circles-2" data-percent="50">
-                                    </div>
-                                    <p>Ahorro de energía</p>
-                                </div>
-                                <div class="round_graphic" id="graphic_water">
-                                    <h3>Consumo <br>de Agua</h3>
-                                    <div class="circle" id="circles-3" data-percent="18">
-                                    </div>
-                                    <p>Ahorro de agua</p>
-                                </div>
-                                <div class="round_graphic" id="graphic_emisiones">
-                                    <h3>Emisiones<br>de CO2</h3>
-                                    <div class="circle" id="circles-4" data-percent="0">
-                                    </div>
-                                    <div class="info_circle">
-                                        <p class="number">123 <span>km/m2</span></p>
-                                        <span>Ton CO2 / año</span>
-                                    </div>
-                                </div>
-
-                                <div class="round_graphic" id="graphic_save">
-                                    <h3>Ahorro mensual <br>en pesos</h3>
-                                    <div class="circle" id="circles-5" data-percent="0">
-                                    </div>
-                                    <div class="info_circle">
-                                        <p class="price">$101.0</p>
-                                        <span>Pesos Aproximado</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                    
-                    <!-- MOCKUP PANTALLA 09  características -->
-
-                    <section id="section_eight" class="section ">
-                        <div class="content">
-                            <div class="caracteristicas">
-                                <div class="info_vivienda construccion_info">
-                                    <span class="icon">
-                                                            
-                                    </span>
-                                    <span class="info">
-                                        432.1
-                                    </span>
-                                    <p>construcción</p>
-                                </div>
-                                <div class="info_vivienda  recamaras_info">
-                                    <span class="icon">
-                                        
-                                    </span>
-                                     <span class="info">
-                                        2
-                                    </span>
-                                    <p>recmaras</p>
-                                </div>
-                                <div class="info_vivienda  banios_info">
-                                    <span class="icon">
-                                        
-                                    </span>
-                                     <span class="info">
-                                        1
-                                    </span>
-                                    <p>baños</p>
-                                </div>   
-                                <div class="info_vivienda estacionamiento_info">
-                                    <span class="icon">
-                                        
-                                    </span>
-                                    <span class="info">
-                                        1
-                                    </span>
-                                    <p>estacionamiento</p>
-                                </div>   
-                            </div>
-                            <div class="info-caracteristicas">
-                                <div class="map-caracteristicas">
-                                    <img src="images/caracteristicas01.png">
-                                </div>
-                                <div class="tipo-caracteristica">
-                                    <img src="images/tipocaracteristica01.png">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <!-- MOCKUP PANTALLA 10 MATERIALES Y CONSTRUCCIÓN -->
-
-                    <section id="section_nine" class="section ">
-                        <div class="content">
-                            <div class="materiales">
-                                <img src="images/new/materiales01.png">
-                                <div class="buttons">
-                                    <a href="#" class="buttons_item techo">
-                                        <span class="icon"></span>
-                                        <p>Techo</p>
-                                    </a>
-                                    <a href="#" class="buttons_item muros">
-                                        <span class="icon"></span>
-                                        <p>Muros y puertas</p>
-                                    </a>
-                                    <a href="#" class="buttons_item piso">
-                                        <span class="icon"></span>
-                                        <p>Piso</p>
-                                    </a>
-                                    <a href="#" class="buttons_item ventanas">
-                                        <span class="icon"></span>
-                                        <p>Ventanas</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- MOCKUP PANTALLA 11 MODAL AGUA -->
-
+                   
                     <section id="section_ten" class="section ">
                         <div class="content">   
                             <div id="modal_box" class="modal_box">
@@ -901,20 +240,17 @@
                         </div>
                     </section>
 
-                    <!-- MOCKUP PANTALLA 13 -->
-
-                    <section id="section_twelve" class="section">
-                        <div class="content">
-                    
-                        </div>
-                    </section>
-
 
                 </div>                
             </div>
 
 
-            <div id="round">                    
+            <div id="round">     
+                <div class="title_section">
+                    <div class="name" >
+                        <img src="images/new/titles/title_p01.png">
+                    </div>
+                </div>
                 <div class="grass"></div>                                           
             </div>
             <div id="footer">                
@@ -1001,13 +337,15 @@
                 Circles.create({
                     id:         child.id,
                     percentage: percentage,
-                    radius:     60,
+                    radius:     55,
                     width:      10,
                     number:     percentage ,
                     text:       '%',
                     colors:     colors[i - 1]
                 });
             }
-        </script>
+
+           document.getElementsByTagName('body')[0].className+='inicio';
+           </script>
 </body>
 </html>
