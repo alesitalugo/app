@@ -2,14 +2,66 @@
  $.easing.expo = function (x, t, b, c, d) {
         return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
 };
+
 $('#next').on('click', function(){
    $('.grass').rotate({animateTo:180}, 300,  'expo');
    $('.title_section').rotate({animateTo: 360}, 300, 'expo');
 });	
+
 $('#prev').on('click',  function(){
 	$('.grass').rotate({animateTo:-180},100,  'expo');
 	$('.title_section').rotate({animateTo: 360}, 300, 'expo');
 });
+
+$('.selected_calf').on('click', function(){
+	$('.selected').removeClass('on');
+	$(this).find('.selected').addClass('on');
+});
+
+$('.table-content, .content_table, .tip_content').rollbar();
+
+/*$(function() {
+    function load(url, push) {
+        $.ajax({
+            url: url,
+            success: function (data) {
+                var title = data.match("<title>(.*?)</title>")[1];
+                document.title = title;
+                if (push) {
+                    history.pushState(null, title, url);
+                }
+            }
+        });
+    }
+
+    $(document).click(function(e) {
+        if (e.target.nodeName === 'A') {
+            var url = $(e.target).attr('href');
+            if (url.indexOf('#') !== 0) {
+                load(url, true);
+                e.preventDefault();
+            }
+        }
+    });
+
+    $(window).bind('popstate', function(e) {
+        load(window.location.href, false);
+    });
+});*/
+
+var mainAnimation = function(){
+	var content = content;
+	var title = null;
+	return{
+		'init': function(){
+						
+		}
+	}
+}
+
+$('#container').animate({'top':'0'}, 1000 , 'expo');
+$('.grass').rotate({animateTo: 180}, 100, 'expo');
+$('.title_section').rotate({animateTo:360}, 300, 'expo');
 
 /*var sections = function(slider){
 	var slider = slider;
@@ -34,21 +86,6 @@ $('#prev').on('click',  function(){
 		}
 	} 
 }*/
-
-
-var mainAnimation = function(){
-	var content = content;
-	var title = null;
-	return{
-		'init': function(){
-			
-		}
-	}
-}
-	$('#container').animate({'top':'0'}, 1000 , 'expo');
-	$('.grass').rotate({animateTo: 180}, 100, 'expo');
-	$('.title_section').rotate({animateTo:360}, 300, 'expo');
-
 /*$('.selector').on('click', function(){
 	
 });

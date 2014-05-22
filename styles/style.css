@@ -310,6 +310,15 @@ html, body{
 	top: -35px;	
 	cursor: pointer;
 	background: url('../images/new/sprite01.png') no-repeat;	
+	opacity: 1;
+}
+.nav_menu .arrow:hover{
+	-webkit-transition: opacity   .5s ease-in-out ;
+	-moz-transition: opacity  .5s ease-in-out;
+	-o-transition: opacity  .5s ease-in-out;
+	-ms-transition: opacity  .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+	opacity: 0.7;
 }
 #prev{
 	left: 0;
@@ -385,6 +394,15 @@ html, body{
 	float: left;
 	margin:0px  20px;
 	list-style-type: none;
+	-webkit-transition: opacity   .3s ease-in-out ;
+	-moz-transition: opacity  .3s ease-in-out;
+	-o-transition: opacity  .3s ease-in-out;
+	-ms-transition: opacity  .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
+	opacity: 1;
+}
+#page_menu .page-item:hover {
+	opacity: 0.8;
 }
 #page_menu .page-item span.icon{
 	display: block;
@@ -1152,14 +1170,16 @@ color: #496b04;
 #canvas .circle {
 	display: inline-block;
 	margin: 1em;
-	width: 230px;
+	width: 95px;
+	float: left;
 	position: relative;
+	height: 110px;
 }
 .circle .icon {
 	background: url(../images/new/sprite01.png) ;
 	display: block;
 	position: absolute;
-	left: 20%;
+	left: 38%;
 	top: 30%;		
 }
  #circles-1 .icon{
@@ -1194,20 +1214,71 @@ color: #496b04;
 	left: 5px;
 	font-size: 22px;
 }
-#circles-1  .circles-text-wrp{
+#circles-1  .circles-text-wrp, #graphic_design  .info_circle{
 	background: url('../images/new/calificacion.png') -280px -8px;
 	width: 110px;
 	height: 68px;
+	position: relative;
+	float: left;
+top: 48px;
 }
-#circles-2  .circles-text-wrp{
+#graphic_design .info_circle p{
+	top: 0;
+	margin: 5px 0px 0px 0px;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	left: 3px;
+	width: 95px;
+}
+#graphic_design .info_circle .number span {
+	float: right;
+	margin: 10px 2px 0px;
+	font-size: 20px;
+}
+#graphic_energy .info_circle p{
+	top: 0;
+	margin: 5px 0px 0px 0px;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	left: 3px;
+	width: 95px;
+}
+#graphic_energy .info_circle .number span {
+	float: right;
+	margin: 10px 2px 0px;
+	font-size: 20px;
+}
+#graphic_water .info_circle p{
+	top: 0;
+	margin: 5px 0px 0px 0px;
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	left: 3px;
+	width: 95px;
+}
+#graphic_water .info_circle .number span {
+	float: right;
+	margin: 10px 2px 0px;
+	font-size: 20px;
+}
+#graphic_energy  .circles-text-wrp, #graphic_energy  .info_circle{
 	background: url('../images/new/calificacion.png') -287px -245px;
 	width: 108px;
 	height: 57px;
+	position: relative;
+	float: left;
+top: 48px;
 }
-#circles-3  .circles-text-wrp{
+#graphic_water  .circles-text-wrp, #graphic_water .info_circle{
 	background: url('../images/new/calificacion.png') -287px -175px;
 	width: 98px;
 	height: 57px;
+	position: relative;
+	float: left;
+top: 48px;
 }
 .circles svg{
 	float: left;
@@ -1217,7 +1288,7 @@ color: #496b04;
 	margin-top: 30px;
 }
 .round_graphic{
-	width: 245px;
+	width: 240px;
 	float: left;
 	position: relative;
 }
@@ -1251,12 +1322,12 @@ color: #496b04;
 }
 #graphic_water h3, #graphic_water p  {
 	color: #66cccc;
-	left: 140px;
+	left: 120px;
 
 }
 #graphic_emisiones {
-	width: 270px;
-	margin: 40px ;
+	width: 280px;
+	margin: 20px 50px ;
 }
 #graphic_emisiones svg {
 	float: left;
@@ -1311,8 +1382,8 @@ color: #496b04;
 	display: none;
 }
 #graphic_save{
-	width: 276px;
-	margin: 40px ;
+	width: 285px;
+	margin: 20px 30px ;
 }
 #graphic_save h3{
 	left: 115px;
@@ -1358,4 +1429,16 @@ color: #496b04;
 	margin: 0;
 	left: 28%;
 	top: 26%;
+}
+#circle_5{
+	background: url('../images/new/titles/spriteGrafica01.png') no-repeat -1px -252px ;
+	width: 133px;
+	float: left;
+	height: 133px;
+}
+#circle_4{
+	background: url('../images/new/titles/spriteGrafica01.png') no-repeat -2px -113px;
+	width: 133px;
+	height: 133px;
+	float: left;
 }

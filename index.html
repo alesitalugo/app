@@ -28,44 +28,44 @@
         </div>-->
         <div id="header">
             <ul class="nav nav-pills pull-right">
-                <li class="menu-item ">
-                    <a href="" id="menu-estado" class="link-menu">
+                <li class="menu-item menuon">
+                    <a href="estado.html" id="menu-estado" class="link-menu">
                         <span class="icon"><i></i></span>
                         <p>estado</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menudos">
+                <li class="menu-item menuon">
+                    <a href="municipio.html" class="link-menu" id="menudos">
                         <span class="icon"><i></i></span>
                         <p>municipio</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menutres">
+                <li class="menu-item menuon">
+                    <a href="calificacion.html" class="link-menu" id="menutres">
                         <span class="icon"><i></i></span>
                         <p>calificación</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menucuatro">
+                <li class="menu-item menuon">
+                    <a href="rangosprecio.html" class="link-menu" id="menucuatro">
                         <span class="icon"><i></i></span>
                         <p>precio</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menucinco">
+                <li class="menu-item menuon">
+                    <a href="vivienda.html" class="link-menu" id="menucinco">
                         <span class="icon"><i></i></span>
                         <p>tipo de vivienda</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menuseis">
+                <li class="menu-item menuon">
+                    <a href="grafica.html" class="link-menu" id="menuseis">
                         <span class="icon"><i></i></span>
                         <p>búsqueda</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="" class="link-menu" id="menusiete">
+                <li class="menu-item menuon">
+                    <a href="materiales.html" class="link-menu" id="menusiete">
                         <span class="icon"><i></i></span>
                         <p>resultados</p>
                     </a>
@@ -85,16 +85,12 @@
                             <div class="item_left">
                             </div>
                             <div id="line" class="item_line">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
-
-  <path class="path" fill="#62A13D" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M159.064,7.24c-20.682,35.619-41.364,71.238-62.046,106.857c-28.071,48.346-56.143,96.691-84.214,145.036
-            c-2.247,3.869-4.493,7.738-6.74,11.607c-0.765,1.317,2.175,1.179,2.738,0.21c20.682-35.619,41.364-71.238,62.046-106.857
-            c28.071-48.346,56.143-96.691,84.214-145.036c2.246-3.869,4.492-7.738,6.739-11.607C162.567,6.133,159.627,6.271,159.064,7.24
-            L159.064,7.24z"/>
-  
-</svg>
-
+                                <svg>
+                                  <path class="path" fill="#62A13D" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M159.064,7.24c-20.682,35.619-41.364,71.238-62.046,106.857c-28.071,48.346-56.143,96.691-84.214,145.036
+                                            c-2.247,3.869-4.493,7.738-6.74,11.607c-0.765,1.317,2.175,1.179,2.738,0.21c20.682-35.619,41.364-71.238,62.046-106.857
+                                            c28.071-48.346,56.143-96.691,84.214-145.036c2.246-3.869,4.492-7.738,6.739-11.607C162.567,6.133,159.627,6.271,159.064,7.24
+                                            L159.064,7.24z"/>
+                                </svg>
                             </div>
                             <div class="item_right">
                             </div>
@@ -270,7 +266,7 @@
                     <ul id="page_menu">
                         <li class="page-item" id="link_home">
                             <span class="icon"></span>
-                            <a href="#">home</a>
+                            <a href="index.html">home</a>
                         </li>
                         <li class="page-item" id="link_video">
                             <span class="icon"></span>                        
@@ -322,30 +318,10 @@
         </div>    
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>-->
+        <script type="text/javascript">
+            document.getElementsByTagName('body')[0].setAttribute('class','home');
+        </script>
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
-        <script type="text/javascript">
-            $('.table-content, .content_table, .tip_content').rollbar();
-            var colors = [
-                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
-            ];
-
-            for (var i = 1; i <= 5; i++) {
-                var child = document.getElementById('circles-' + i),
-                    percentage = child.dataset.percent;
-                    
-                Circles.create({
-                    id:         child.id,
-                    percentage: percentage,
-                    radius:     55,
-                    width:      10,
-                    number:     percentage ,
-                    text:       '%',
-                    colors:     colors[i - 1]
-                });
-            }
-
-           document.getElementsByTagName('body')[0].className+='inicio';
-           </script>
-</body>
+    </body>
 </html>

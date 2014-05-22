@@ -29,43 +29,43 @@
         <div id="header">
             <ul class="nav nav-pills pull-right">
                 <li class="menu-item menuon">
-                    <a href="" id="menu-estado" class="link-menu">
+                    <a href="estado.html" id="menu-estado" class="link-menu">
                         <span class="icon"><i></i></span>
                         <p>estado</p>
                     </a>
                 </li>
                 <li class="menu-item menuon">
-                    <a href="" class="link-menu" id="menudos">
+                    <a href="municipio.html" class="link-menu" id="menudos">
                         <span class="icon"><i></i></span>
                         <p>municipio</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="" class="link-menu" id="menutres">
+                    <a href="calificacion.html" class="link-menu" id="menutres">
                         <span class="icon"><i></i></span>
                         <p>calificación</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="" class="link-menu" id="menucuatro">
+                    <a href="rangosprecio.html" class="link-menu" id="menucuatro">
                         <span class="icon"><i></i></span>
                         <p>precio</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="" class="link-menu" id="menucinco">
+                    <a href="vivienda.html" class="link-menu" id="menucinco">
                         <span class="icon"><i></i></span>
                         <p>tipo de vivienda</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="" class="link-menu" id="menuseis">
+                    <a href="grafica.html" class="link-menu" id="menuseis">
                         <span class="icon"><i></i></span>
                         <p>búsqueda</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="" class="link-menu" id="menusiete">
+                    <a href="materiales.html" class="link-menu" id="menusiete">
                         <span class="icon"><i></i></span>
                         <p>resultados</p>
                     </a>
@@ -78,12 +78,12 @@
                 
                 <div class="section-row" id="maincontainer" data-sections="12">
 
-                  
-
                     <section id="section_two" class="section  activa">
                         <div class="content">
                             <div class="column">
-                                <img src="images/new/map01.png">
+                                <a href="calificacion.html">
+                                    <img src="images/new/map01.png">
+                                </a>
                             </div>
                             <div class="column">
                                 <div class="data-table">
@@ -229,26 +229,5 @@
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>-->
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
-        <script type="text/javascript">
-            $('.table-content, .content_table, .tip_content').rollbar();
-            var colors = [
-                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
-            ];
-
-            for (var i = 1; i <= 5; i++) {
-                var child = document.getElementById('circles-' + i),
-                    percentage = child.dataset.percent;
-                    
-                Circles.create({
-                    id:         child.id,
-                    percentage: percentage,
-                    radius:     55,
-                    width:      10,
-                    number:     percentage ,
-                    text:       '%',
-                    colors:     colors[i - 1]
-                });
-            }
-        </script>
-</body>
+    </body>
 </html>

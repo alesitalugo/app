@@ -38,7 +38,7 @@
     this._strokeWidth    = options.width  || 10;
     this._colors         = options.colors || ['#EEE', '#F00'];
     this._interval       = 16;
-    this._textWrpClass   = 'circles-text-wrp';
+    this._textWrpClass   = '';
     this._textClass      = 'circles-text';
     this._numberClass    = 'circles-number';
     
@@ -143,7 +143,7 @@
       var html =  '<div class="' + this._textWrpClass + '" >' + 
         this._calculateNumber(this._canAnimate ? 0 : this._number);
       if (this._text) {
-        html += '<span class="' + this._textClass + '">' + this._text + '</span>';
+        html += '';
       }
       html += '</div>';
       return html;
@@ -151,7 +151,7 @@
 
     _calculateNumber: function(number) {
       var parts = (number + '').split('.'),
-        html = '<span class="' + this._numberClass + '">' + parts[0];
+        html = '<span class="' + this._numberClass + '">' ;
       if (parts.length > 1) {
         html += '.<span style="font-size:.4em">' + parts[1].substring(0, 2) + '</span>';
       }
