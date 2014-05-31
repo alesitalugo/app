@@ -12,27 +12,63 @@ html, body{
 #branches-top{
 	
 }
-.path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
+.animate_intro{
+	width: 800px;
+	margin: 0px auto;
+	height: 290px;
+	position: relative;
+	top: 150px;
 }
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+.animate_intro .item_left{
+	float: left;
+	width: 354px;
+	height: 150px;
+	display: block;
 }
-@-moz-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+.animate_intro .item_left .image{
+	width: 354px;
+	background: url(../images/new/home01.png );
+	height: 150px;
+	-webkit-transition: opacity   2s ease-in-out ;
+	-moz-transition: opacity  2s ease-in-out;
+	-o-transition: opacity  2s ease-in-out;
+	-ms-transition: opacity  2s ease-in-out;
+	transition: opacity 2s ease-in-out;
+	opacity: 0;
+}
+.animate_intro .item_left .active, .animate_intro .item_right .active{
+	opacity: 1 !important;
+}
+.animate_intro .item_right{
+	float: left;
+	width: 280px;
+	height: 150px;
+	display: block;
+}
+.animate_intro .item_right .image{
+	width: 250px;
+	background: url(../images/new/home02.png );
+	height: 150px;
+	-webkit-transition: opacity 3s ease-in-out ;
+	-moz-transition: opacity 3s ease-in-out;
+	-o-transition: opacity 3s ease-in-out;
+	-ms-transition: opacity 3s ease-in-out;
+	transition: opacity 3s ease-in-out;
+	opacity: 0;
+}
+.plant_home{
+	position: absolute;
+	top: 55px;
+	left: 46px;
+	height: 0px;
+}
+.line_home{
+	height: 0px;
+}
+#line{
+	float: left;
+	width: 160px;
+	position: relative;
 }
 #header-logo{
 	width: 874px;
@@ -49,6 +85,9 @@ html, body{
 	height: 33px;
 	display: block;
 	margin: 20px auto;
+	clear: both;
+	position: relative;
+	top: 150px;
 }
 #header-logo a {
 	width: 266px;

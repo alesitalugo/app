@@ -20,6 +20,14 @@ $('.selected_calf').on('click', function(){
 
 $('.table-content, .content_table, .tip_content').rollbar();
 
+$('.line_home').animate({'height':'280px'}, 1000, function(){
+	$('.plant_home').animate({'height': '150px'}, 2000, function(){
+		//opacity 0 to 1
+		$('.item_left .image').addClass('active', 500);
+			$('.item_right .image').addClass('active');
+		});
+	});
+
 /*$(function() {
     function load(url, push) {
         $.ajax({
