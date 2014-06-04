@@ -214,28 +214,11 @@
         </div>    
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>-->
+        <script type="text/javascript">
+            document.getElementsByTagName('body')[0].setAttribute('class','carac');
+        </script>
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
-        <script type="text/javascript">
-            $('.table-content, .content_table, .tip_content').rollbar();
-            var colors = [
-                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
-            ];
-
-            for (var i = 1; i <= 5; i++) {
-                var child = document.getElementById('circles-' + i),
-                    percentage = child.dataset.percent;
-                    
-                Circles.create({
-                    id:         child.id,
-                    percentage: percentage,
-                    radius:     55,
-                    width:      10,
-                    number:     percentage ,
-                    text:       '%',
-                    colors:     colors[i - 1]
-                });
-            }
-        </script>
+       
 </body>
 </html>

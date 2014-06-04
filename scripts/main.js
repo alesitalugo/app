@@ -1,105 +1,166 @@
-//console.log('\'Allo \'Allo!');
- $.easing.expo = function (x, t, b, c, d) {
-        return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+$.easing.expo = function (x, t, b, c, d) {
+    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
 };
+$('.table-content, .content_table, .tip_content').rollbar();
+//tooltip function
+(function( $ ) {
+  $.fn.tooltips = function(el) {
+    var $tooltip,
+      $body = $('body'),
+      $el;
+    return this.each(function(i, el) {
+      $el = $(el).attr("data-tooltip", i);
+      var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="pico"></div></div>').appendTo("body");
+      var linkPosition = $el.position();
 
-$('#next').on('click', function(){
-   $('.grass').rotate({animateTo:180}, 300,  'expo');
-   $('.title_section').rotate({animateTo: 360}, 300, 'expo');
-});	
+      $tooltip.css({
+        top: linkPosition.top - $tooltip.outerHeight() + 180,
+        left: linkPosition.left - ($tooltip.width()/4)
+      });
 
-$('#prev').on('click',  function(){
-	$('.grass').rotate({animateTo:-180},100,  'expo');
-	$('.title_section').rotate({animateTo: 360}, 300, 'expo');
+      $el
+      .removeAttr("title")
+      .hover(function() {
+
+        $el = $(this);
+
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
+        var linkPosition = $el.position();
+
+        $tooltip.css({
+          top: linkPosition.top - $tooltip.outerHeight() + 180,
+          left: linkPosition.left - ($tooltip.width()/4)
+        });
+        $tooltip.addClass("active");
+      }, function() {
+
+        $el = $(this);
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
+        setTimeout(function() {
+          $tooltip.removeClass("active").removeClass("out");
+          }, 300);
+        });
+      });
+    }
+})(jQuery);
+
+$(".masterTooltip").tooltips();
+
+var menuActive = $('.link-menu').data('menu');
+var nextHref = $(menuActive).next();
+var ultimoActive = $('.menuon a').last().data('menu');
+var section = $('body').attr('class');
+
+var sizeAdjust = function(){
+	var width = $(window).outerWidth();
+	var height = $(window).outerHeight();
+
+	if(height <= 730){
+		$('.container_modal').css({'margin':'70px auto'});
+		$('#header-logo').css({
+
+		});
+	} else {
+
+	}
+	if(width <= 980){
+
+	} else {
+
+	}
+}
+
+$(window).resize(function(){
+	sizeAdjust();
 });
 
+sizeAdjust();
+
+var select_next = function(section){
+	
+}
+
+var move_section =function(arrow) {
+	var arrow = arrow;
+	var section = $('body').attr('class');
+	var nextSection = null;
+	var prevSection = null;
+
+	return{
+		'init': function(){
+			if(section !== null){
+				counter = 0;
+				$('.menu-item .link-menu').each(function(){
+					section = $('body').attr('class');
+					counter++;
+				});		
+			}
+		},
+		'next_section': function(){
+			/*$('.grass').rotate({animateTo:180}, 300,  'expo', function(){
+   				$('.title_section').rotate({animateTo: 360}, 600, 'expo');
+   			});
+			.data('menu', section)
+			*/ 
+   			//console.log(section);
+   			$('body').attr('class');
+
+   			var menulink = $('.link-menu').data('menu', section).addClass('activate');
+   			//console.log(menulink);
+
+   			//console.log(counter);
+   			select_next(section);
+
+		}, 	
+		'prev_section': function(){
+			/*$('.grass').rotate({animateTo:-180}, 100, 'expo', function(){
+				$('.title_section').rotate({animateTo: 360}, 300, 'expo');
+			});*/
+		}
+	}
+}
+var navigate = new move_section(document.getElementById('next'));
+   	navigate.init();
+
+$('#next').on('click', function(e){
+   	e.preventDefault();
+   	navigate.next_section();
+});	
+$('#prev').on('click',  function(e){
+	e.preventDefault();
+	navigate.prev_section();
+});
 $('.selected_calf').on('click', function(){
 	$('.selected').removeClass('on');
 	$(this).find('.selected').addClass('on');
 });
-
-$('.table-content, .content_table, .tip_content').rollbar();
-
-$('.line_home').animate({'height':'280px'}, 2000, function(){
-		//opacity 0 to 1
-		$('.item_left .image').addClass('active', 500);
-			$('.item_right .image').addClass('active');
+$('.line_home').animate({'height':'280px'}, 1000, function(){
+	$('.item_left').animate({
+		'left': '0px',
+		'opacity':1
+	}, 800, 'expo', function(){
+		$('.item_right').animate({
+			'left':'0px',
+			'opacity':1
+		}, 800, 'expo', function(){
+			$('#go_init').animate({
+				'opacity':1
+			}, 500);
+		});
 	});
-
-/*$(function() {
-    function load(url, push) {
-        $.ajax({
-            url: url,
-            success: function (data) {
-                var title = data.match("<title>(.*?)</title>")[1];
-                document.title = title;
-                if (push) {
-                    history.pushState(null, title, url);
-                }
-            }
-        });
-    }
-
-    $(document).click(function(e) {
-        if (e.target.nodeName === 'A') {
-            var url = $(e.target).attr('href');
-            if (url.indexOf('#') !== 0) {
-                load(url, true);
-                e.preventDefault();
-            }
-        }
-    });
-
-    $(window).bind('popstate', function(e) {
-        load(window.location.href, false);
-    });
-});*/
-
-var mainAnimation = function(){
-	var content = content;
-	var title = null;
-	return{
-		'init': function(){
-						
-		}
-	}
-}
-
+});
 $('#container').animate({'top':'0'}, 1000 , 'expo');
 $('.grass').rotate({animateTo: 180}, 100, 'expo');
 $('.title_section').rotate({animateTo:360}, 300, 'expo');
-
-/*var sections = function(slider){
-	var slider = slider;
-	var actual_slide = null;
-	var sections = null; 
-	var prev_slide = null;
-	var slide_direction = null; 
-	var menu_indicator  = null;
-	var on_first_slide = null;
-	var slide_object = null;
-
-	return {
-		'init': function( el ){
-			$('.grass').rotate({animateTo:180}, 100,  'expo');
-   			$('.title_section').rotate({animateTo: 180}, 300, 'expo');
-		}, 
-		'slide_next':function(){
-
-		}, 
-		'slide_prev': function(){
-
-		}
-	} 
-}*/
-/*$('.selector').on('click', function(){
-	
+$('.modal_button').on('click', function(){
+	$('.modal_button').removeClass('active');
+	$(this).addClass('active');
 });
-
-$('.menuon').ready(function(){
-
-});*/
-//create a global function for round the grass 360° and the sections appear in 180°
-//when the section was selected we need to add the menu item that corresponde into the nav bar  . 
-//if is back , the item menu goes away, and the section round to the other side in 180°
-// all items only round when you click the corresponding button, prev or next 
+$('.close_modal').on('click', function(){
+    $('#modal_box').fadeOut(500);
+});
+$('#link_tips').on('click', function(){
+	$('#modal_box').fadeIn(500, function(){
+		$('.content_modal').fadeIn(1000);
+	});
+});

@@ -27,45 +27,45 @@
             </a>
         </div>
         <div id="header">
-            <ul class="nav nav-pills pull-right">
+             <ul class="nav nav-pills pull-right">
                 <li class="menu-item menuon">
-                    <a href="estado.html" id="menu-estado" class="link-menu">
+                    <a href="estado.html" id="menu-estado" class="link-menu" data-menu="estado">
                         <span class="icon"><i></i></span>
                         <p>estado</p>
                     </a>
                 </li>
                 <li class="menu-item menuon">
-                    <a href="municipio.html" class="link-menu" id="menudos">
+                    <a href="municipio.html" class="link-menu" id="menudos" data-menu="municipio"> 
                         <span class="icon"><i></i></span>
                         <p>municipio</p>
                     </a>
                 </li>
                 <li class="menu-item menuon">
-                    <a href="calificacion.html" class="link-menu" id="menutres">
+                    <a href="calificacion.html" class="link-menu" id="menutres" data-menu="calificacion">
                         <span class="icon"><i></i></span>
                         <p>calificación</p>
                     </a>
                 </li>
                 <li class="menu-item menuon">
-                    <a href="rangosprecio.html" class="link-menu" id="menucuatro">
+                    <a href="rangosprecio.html" class="link-menu" id="menucuatro" data-menu="rangosprecio">
                         <span class="icon"><i></i></span>
                         <p>precio</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="vivienda.html" class="link-menu" id="menucinco">
+                <li class="menu-item">
+                    <a href="vivienda.html" class="link-menu" id="menucinco" data-menu="vivienda">
                         <span class="icon"><i></i></span>
                         <p>tipo de vivienda</p>
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="grafica.html" class="link-menu" id="menuseis">
+                <li class="menu-item">
+                    <a href="grafica.html" class="link-menu" id="menuseis" data-menu="grafica">
                         <span class="icon"><i></i></span>
                         <p>búsqueda</p>
                     </a>
                 </li>
                 <li class="menu-item ">
-                    <a href="materiales.html" class="link-menu" id="menusiete">
+                    <a href="materiales.html" class="link-menu" id="menusiete" data-menu="materiales">
                         <span class="icon"><i></i></span>
                         <p>resultados</p>
                     </a>
@@ -153,14 +153,14 @@
             </div>
             <div id="footer">                
                 <div class="nav_menu">
-                    <a class="arrow" id="prev">
+                    <a class="arrow" id="prev" href="">
                     </a>
                     <div id="logo">
                         <a href="#">
                             <img src="images/new/infonavit01.png">
                         </a>
                     </div>
-                    <a class="arrow" id="next">
+                    <a class="arrow" id="next" href="">
                         
                     </a> 
                 </div>
@@ -220,28 +220,11 @@
         </div>    
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>-->
+        <script type="text/javascript">
+            document.getElementsByTagName('body')[0].setAttribute('class','rangosprecio');
+        </script>
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
-        <script type="text/javascript">
-            $('.table-content, .content_table, .tip_content').rollbar();
-            var colors = [
-                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
-            ];
-
-            for (var i = 1; i <= 5; i++) {
-                var child = document.getElementById('circles-' + i),
-                    percentage = child.dataset.percent;
-                    
-                Circles.create({
-                    id:         child.id,
-                    percentage: percentage,
-                    radius:     55,
-                    width:      10,
-                    number:     percentage ,
-                    text:       '%',
-                    colors:     colors[i - 1]
-                });
-            }
-        </script>
+        
 </body>
 </html>

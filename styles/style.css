@@ -9,8 +9,9 @@ html, body{
 	background-attachment: fixed;
 	background-size: cover;
 }
-#branches-top{
-	
+a , a img {
+	outline: none;
+	border: none;
 }
 .animate_intro{
 	width: 800px;
@@ -24,6 +25,9 @@ html, body{
 	width: 354px;
 	height: 150px;
 	display: block;
+	position: relative;
+	left: 300px;
+	opacity: 0;
 }
 .animate_intro .item_left .image{
 	width: 354px;
@@ -34,7 +38,7 @@ html, body{
 	-o-transition: opacity  2s ease-in-out;
 	-ms-transition: opacity  2s ease-in-out;
 	transition: opacity 2s ease-in-out;
-	opacity: 0;
+	opacity: 1;
 }
 .animate_intro .item_left .active, .animate_intro .item_right .active{
 	opacity: 1 !important;
@@ -44,6 +48,9 @@ html, body{
 	width: 280px;
 	height: 150px;
 	display: block;
+	position: relative;
+	left: -120px;
+	opacity: 0;
 }
 .animate_intro .item_right .image{
 	width: 250px;
@@ -54,7 +61,7 @@ html, body{
 	-o-transition: opacity 3s ease-in-out;
 	-ms-transition: opacity 3s ease-in-out;
 	transition: opacity 3s ease-in-out;
-	opacity: 0;
+	opacity: 1;
 }
 .plant_home{
 	position: absolute;
@@ -88,6 +95,7 @@ html, body{
 	clear: both;
 	position: relative;
 	top: 150px;
+	opacity: 0;
 }
 #header-logo a {
 	width: 266px;
@@ -95,14 +103,6 @@ html, body{
 	margin: 0 auto;
 	display: block;
 	padding-top: 25px;
-}
-.plant-left{
-	/*width: 40%;
-	height: 107px;
-	background: url('../images/new/plantsLeft01.png');
-	left: -40px;
-	position: absolute;
-	background-position: 245px 0px;*/
 }
 #branches-top{
 	width: 100%;
@@ -112,20 +112,9 @@ html, body{
 	position: absolute;
 	background-position: 245px 0px;
 }
-.plant-right{
-	/*width: 40%;
-	height: 107px;
-	background: url('../images/new/plantsRight01.png');
-	right: 0;
-	position: absolute;
-	background-position: 245px 0px;*/
-}
 #wrap {
 	width: 100%;
 	height: auto; 
-}
-.container{
-
 }
 #container{
 	width: 980px;
@@ -133,12 +122,6 @@ html, body{
 	height: 500px;
 	top:-730px;
 	position: relative;
-}
-.section {
-	display: none;
-}
-.activa{
-	display: block;
 }
 .section .content{
 	margin: 0 auto;
@@ -170,16 +153,17 @@ html, body{
 	display: none;
 	list-style-type: none;
 	clear: both;
-	height: 50px;
-	margin: 5px;
+	height: 60px;
+	margin: 5px auto;
 	padding: 5px 0;
+	width: 18px;
 }
 #header .nav .menuon{
 	display: block;
 }
 #header .nav  .menu-item a {
 	list-style-type: none;
-	line-height: 50px;
+	line-height: 58px;
 	padding: 0;
 	width: 173px;
 	display: block;
@@ -191,13 +175,10 @@ html, body{
 	text-align: center;
 	z-index: 900;
 }
-#header .nav .menu-item .link-menu{
-
-}
 #header .nav .menu-item .link-menu .icon{
 	margin: 0 auto;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	display: block;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -216,17 +197,22 @@ html, body{
 }
 #header .nav .menu-item .link-menu p{
 	position: absolute;
-	left: -44px;
-	height: 50px;
+	left: -40px;
+	height: 60px;
 	padding: 0;
 	margin: 0;
-	border-radius: 25px 0px 0px 25px;
-	width: 180px;
+	border-radius: 40px 0px 0px 40px;
+	-webkit-border-radius: 40px 0px 0px 40px;
+	-moz-border-radius: 40px 0px 0px 40px;
+	-o-border-radius: 40px 0px 0px 40px;
+	-ms-border-radius: 40px 0px 0px 40px;
+	width: 170px;
 	padding: 0 5px;
 	position: relative;
 	z-index: 0;
 	display: none;
-	font-family: 'nillandregular';
+    font-family: 'nilland-smallcapsbold';
+	font-size: 14px;
 }
 #header .nav .menu-item a:hover > p{
 	display: block;
@@ -241,7 +227,7 @@ html, body{
 }	
 #menu-estado .icon i{
 	background-position: -8px -10px;
-	margin: 13px;
+	margin: 18px;
 }
 #menu-estado p{
 	background-color: #85b23d !important;
@@ -254,7 +240,7 @@ html, body{
 }
 #menudos .icon i {
 	background-position: -43px -8px;
-		margin: 12px 15px;
+	margin: 17px 20px;
 
 }
 #menudos p{
@@ -268,7 +254,7 @@ html, body{
 }
 #menutres .icon i {
 	background-position: -84px -13px;
-	margin: 13px;
+	margin: 19px;
 }
 #menutres p{
 	background-color: #5c8608 !important;
@@ -281,7 +267,7 @@ html, body{
 }
 #menucuatro .icon i {
 	background-position: -128px -10px;
-	margin: 9px;
+	margin: 14px;
 }
 #menucuatro p{
 	background-color: #5c8704 !important;
@@ -294,7 +280,7 @@ html, body{
 }
 #menucinco .icon i {
 	background-position: -172px -14px;
-	margin: 15px;
+	margin: 20px;
 }
 #menucinco p{
 	background-color: #486b03 !important;
@@ -307,7 +293,7 @@ html, body{
 }
 #menuseis .icon i {
 	background-position: -211px -10px;
-	margin: 9px;
+	margin: 15px;
 }
 #menuseis p{
 	background-color: #3e5908 !important;
@@ -320,7 +306,7 @@ html, body{
 }
 #menusiete .icon i {
 	background-position: -258px -10px;
-	margin: 13px 11px;
+	margin:18px 16px;
 }
 #menusiete p{
 	background-color: #324905 !important;
@@ -401,7 +387,7 @@ html, body{
 	width: 1002px;
 	height: 961px;
 	position: fixed;
-	bottom: -625px;
+	bottom: -615px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -989,7 +975,6 @@ a.buttons_item {
 	padding-left: 15px;
 	width: 100px;
 }
-
 .piso{
 	left: 660px;
 	top: 130px;
@@ -1016,6 +1001,10 @@ a.buttons_item {
 	left: 0;
 	background-color: rgba(0,0,0,0.5);
 	z-index: 4000;
+	display: none;
+}
+.modal_box{
+	/*display: none;*/
 }
 .container_modal{
 	margin: 170px auto;
@@ -1029,21 +1018,20 @@ a.buttons_item {
 	height: 350px;
 }
 .modal_title{
-text-align: left;
-margin: 10px;
+	text-align: left;
+	margin: 10px 0px;
 }
 .modal_title h2{
 	margin: 0;
-font-family: 'nilland-smallcapsbold';
-font-size: 36px;
-color: #496b04;
+	font-family: 'nilland-smallcapsbold';
+	font-size: 36px;
+	color: #496b04;
 }
 .modal_title p{
 	margin: 0;
-		font-family: 'shantiregular';
-font-size: 10px;
-color: #496b04;
-
+	font-family: 'shantiregular';
+	font-size: 10px;
+	color: #496b04;
 }
 #modal_table{
 	width: 100%;
@@ -1119,6 +1107,7 @@ color: #496b04;
 	position: absolute;
 	top: -35px;
 	right: -37px;
+	cursor: pointer;
 }
 .description_tip{
 
@@ -1141,21 +1130,35 @@ color: #496b04;
 	text-decoration: none;
 	margin: 0 5px;
 	border-radius: 10px;
+	position: relative;
 }
 #modal_nav .modal_nav_item .modal_button:hover{
 	background:#fff;
 	color: #84b23d;
 }
+#modal_nav .modal_nav_item .modal_button:hover > .guide_active{
+	display: block;
+}
 #modal_nav .modal_nav_item .active{
 	background:#fff;
 	color: #84b23d;
+	/*background: url('../images/new/sprite01.png') no-repeat -250px -106px;*/
+	width: 18px;
+	height: 18px;
 	}
+#modal_nav .modal_nav_item .active > .guide_active{
+	display: block;
+}
 #modal_nav .modal_nav_item .guide_active{
-	background: url(../images/new/sprite01.png)  no-repeat -250px -106px;
+	background: url(../images/new/sprite01.png) no-repeat -250px -106px;
 	color: #000;
 	display: block;
 	height: 18px;
 	width: 18px;
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	display: none;
 }
 .modal_title .description_tip {
 	background: #84b23d;
@@ -1182,7 +1185,6 @@ color: #496b04;
 .tip_content .tip_image{
 	float: right;
 	width: 48%;
-
 }
 .modal_tip .content_modal{
 	height: 445px;
