@@ -1,3 +1,81 @@
+
+
+var rotate_circle = function( section ){
+	console.log( section );
+	/*
+	$('.grass').rotate({animateTo:-180}, 100, 'expo', function(){
+		$('.title_section div').removeClass().addClass(section).rotate({animateTo: 360}, 300, 'expo');
+	}) ;
+*/
+};
+
+var get_mapa_mexico = function(){
+
+	$.ajax({
+		type: 'GET',
+		url: '/templates/template_mapa.html',
+		beforeSend: function(){
+			console.log( 'Cargando' );
+		},
+		success: function( response ) {
+			$('#home').hide();
+			$('#stage').html( response ).fadeIn();
+			rotate_circle('mapa');
+		}
+	});
+};
+
+var get_mapa_estado = function( estado ){
+
+	$.ajax({
+		type: 'GET',
+		url: '/templates/template_'+estado+'.html',
+		beforeSend: function(){
+			console.log( 'Cargando' );
+		},
+		success: function( response ) {
+			console.log( response );
+			$('#home').hide();
+			$('#stage').html( response ).fadeIn();
+			rotate_circle('estado');
+		}
+	});
+};
+
+
+/***** BACKBONE ROUTER ***/
+
+var AppRouter = Backbone.Router.extend({
+	routes: {
+		"": "home",
+		"estados": "ver_pais",
+		"estados/:estado": "ver_estado"
+	}
+});
+
+var show_section_home = function(){
+	$('#stage').hide();
+	$('#home').fadeIn();
+};
+
+var app_router = new AppRouter;
+app_router.on('route:home', function ( actions ) {
+	show_section_home();
+});
+app_router.on('route:ver_pais', function ( actions ) {
+	get_mapa_mexico();
+});
+app_router.on('route:ver_estado', function ( estado ) {
+	get_mapa_estado( estado );
+});
+
+Backbone.history.start({ pushState: true });
+
+/**** ***/
+$('#stage').on('click', '#mexico_map path', function(){
+	var estado = $(this).data('estado');
+	Backbone.history.navigate( 'estados/'+estado, true );
+});
 $.easing.expo = function (x, t, b, c, d) {
     return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
 };
@@ -123,7 +201,7 @@ var navigate = new move_section(document.getElementById('next'));
 
 $('#next').on('click', function(e){
    	e.preventDefault();
-   	navigate.next_section();
+	Backbone.history.navigate( 'estados', true );
 });	
 $('#prev').on('click',  function(e){
 	e.preventDefault();
@@ -165,7 +243,7 @@ $('#link_tips').on('click', function(){
 	});
 });
 
-/*GRÁFICA ROUND SVG ANIMATE*/
+/*GRÁFICA ROUND SVG ANIMATE
 
  	var colors = [
         	['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
@@ -205,4 +283,4 @@ var busquedaTable = function(){
 	for(i = 0; i >= i.length; i++){
 
 	}
-}
+} */

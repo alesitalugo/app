@@ -443,6 +443,12 @@ a , a img {
 	width: 650px;
 	text-align: center;
 }
+.name.mapa{
+	background: (estado.png)
+}
+.name.otracosa{
+	background: (otracosa.png)
+}
 .grass{
 	background: url('../images/pasto01.png');
 	width: 986px;
