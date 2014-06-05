@@ -269,39 +269,5 @@
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
 
-        <script type="text/javascript">
-            $('.table-content, .content_table, .tip_content').rollbar();
-            var colors = [
-                ['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
-            ];
-            
-                 $('.round_graphic').each(function(){
-                    var num = $(this).find('.circle').data('percent');
-                    $(this).find('.number').html(num+'<span>%</span>');
-                });
-
-            for (var i = 1; i <= 5; i++) {
-                var child = document.getElementById('circles-' + i),
-                    percentage = child.dataset.percent;
-
-                    //$(child).find('.number').html(percentage);
-
-                Circles.create({
-                    id:         child.id,
-                    percentage: percentage,
-                    radius:     55,
-                    width:      10,
-                    number:     percentage ,
-                    text:       '%',
-                    colors:     colors[i - 1]
-                });
-            }
-
-            if ($.browser.msie  && parseInt($.browser.version, 10) === 8) {
-  alert('IE8'); 
-} else {
-  alert('Non IE8');
-}
-        </script>
 </body>
 </html>

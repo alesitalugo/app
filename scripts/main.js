@@ -2,46 +2,45 @@ $.easing.expo = function (x, t, b, c, d) {
     return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
 };
 $('.table-content, .content_table, .tip_content').rollbar();
+
 //tooltip function
 (function( $ ) {
-  $.fn.tooltips = function(el) {
-    var $tooltip,
-      $body = $('body'),
-      $el;
-    return this.each(function(i, el) {
-      $el = $(el).attr("data-tooltip", i);
-      var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="pico"></div></div>').appendTo("body");
-      var linkPosition = $el.position();
+  	$.fn.tooltips = function(el) {
+	    var $tooltip,
+	      	$body = $('body'),
+	      	$el;
+	    	return this.each(function(i, el) {
+	      		$el = $(el).attr("data-tooltip", i);
+	      		var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="pico"></div></div>').appendTo("body");
+	      		var linkPosition = $el.position();
 
-      $tooltip.css({
-        top: linkPosition.top - $tooltip.outerHeight() + 180,
-        left: linkPosition.left - ($tooltip.width()/4)
-      });
+	      		$tooltip.css({
+	        		top: linkPosition.top - $tooltip.outerHeight() + 180,
+	        		left: linkPosition.left - ($tooltip.width()/2)
+	      		});
 
-      $el
-      .removeAttr("title")
-      .hover(function() {
+	      		$el.removeAttr("title").hover(function() {
 
-        $el = $(this);
+	        		$el = $(this);
 
-        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
-        var linkPosition = $el.position();
+	        		$tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
+	        		var linkPosition = $el.position();
 
-        $tooltip.css({
-          top: linkPosition.top - $tooltip.outerHeight() + 180,
-          left: linkPosition.left - ($tooltip.width()/4)
-        });
-        $tooltip.addClass("active");
-      }, function() {
+	        		$tooltip.css({
+	          			top: linkPosition.top - $tooltip.outerHeight() + 180,
+	          			left: linkPosition.left - ($tooltip.width()/2)
+	        		});
+	        		$tooltip.addClass("active");
+	      		}, function() {
 
-        $el = $(this);
-        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
-        setTimeout(function() {
-          $tooltip.removeClass("active").removeClass("out");
-          }, 300);
-        });
-      });
-    }
+	        		$el = $(this);
+	        		$tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
+	        		setTimeout(function() {
+	          			$tooltip.removeClass("active").removeClass("out");
+	          		}, 300);
+	        	});
+	      	});
+	}
 })(jQuery);
 
 $(".masterTooltip").tooltips();
@@ -157,10 +156,53 @@ $('.modal_button').on('click', function(){
 	$(this).addClass('active');
 });
 $('.close_modal').on('click', function(){
-    $('#modal_box').fadeOut(500);
+	console.log('click');
+    $('.modal_tip').fadeOut(500);
 });
 $('#link_tips').on('click', function(){
-	$('#modal_box').fadeIn(500, function(){
+	$('.modal_tip').fadeIn(500, function(){
 		$('.content_modal').fadeIn(1000);
 	});
 });
+
+/*GRÁFICA ROUND SVG ANIMATE*/
+
+ 	var colors = [
+        	['#e9ebbf', '#cccc33'], ['#f4d9ae', '#ff9900'], ['#cce2e8', '#66cccc'], ['#e0e0e0', '#8ba3a6'], ['#eee0b1', '#cc9900']
+       	];
+            
+    $('.round_graphic').each(function(){
+    	var num = $(this).find('.circle').data('percent');
+    	$(this).find('.number').html(num+'<span>%</span>');
+    });
+
+    for (var i = 1; i <= 5; i++) {
+        var child = document.getElementById('circles-' + i),
+        	percentage = child.dataset.percent;
+
+                    //$(child).find('.number').html(percentage);
+
+                Circles.create({
+                    id:         child.id,
+                    percentage: percentage,
+                    radius:     55,
+                    width:      10,
+                    number:     percentage ,
+                    text:       '%',
+                    colors:     colors[i - 1]
+                });
+            }
+
+    if ($.browser.msie  && parseInt($.browser.version, 10) === 8) {
+  		alert('IE8'); 
+	} else {
+  		alert('Non IE8');
+	}
+
+var busquedaTable = function(){
+	var imageCalification = $('.calf_column').data('calif');
+	var califList = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+	for(i = 0; i >= i.length; i++){
+
+	}
+}

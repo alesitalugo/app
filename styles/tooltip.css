@@ -1,3 +1,11 @@
+.masterTooltip{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.edoMapa{
+  position: relative;
+}
 .tooltip, .pico:after {
   background: #333300;
   border: 2px solid #333300;
