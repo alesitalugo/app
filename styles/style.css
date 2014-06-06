@@ -435,20 +435,53 @@ a , a img {
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.name{
+#add_title{
 	margin: 0 auto;
 	position: relative;
 	top: 20px;
 	left: 0px;
 	width: 650px;
 	text-align: center;
+	height: 147px;
 }
-.name.mapa{
-	background: (estado.png)
+
+
+/*ADD TITLES SECTION*/
+
+
+.title_section .intro{
+	background: url(../images/new/titles/title_p01.png);
 }
-.name.otracosa{
-	background: (otracosa.png)
+.title_section .mapa{
+	background: url(../images/new/titles/title_p02.png);
 }
+.title_section .estado{
+	background: url(../images/new/titles/title_p03.png);
+}
+.title_section .calificacion{
+	background: url(../images/new/titles/title_p04.png);
+}
+.title_section .rangosprecio{
+	background: url(../images/new/titles/title_p05.png);
+}
+.title_section .vivienda{
+	background: url(../images/new/titles/title_p06.png);
+}
+.title_section .resultados{
+	background: url(../images/new/titles/title_p07.png);
+}
+.title_section .grafica{
+	background: url(../images/new/titles/title_p08.png);
+}
+.title_section .caracteristicas{
+	background: url(../images/new/titles/title_p09.png);
+}
+.title_section .materiales{
+	background: url(../images/new/titles/title_p10.png);
+}
+
+
+
 .grass{
 	background: url('../images/pasto01.png');
 	width: 986px;
@@ -546,11 +579,11 @@ a , a img {
 	background: #85b23d;
 	height: auto;
 	color: #fff;
-	border-radius: 20px;
-	-webkit-border-radius: 20px ;
-	-moz-border-radius: 20px ;
-	-o-border-radius:20px ;
-	-ms-border-radius:20px ;
+	border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0 ;
+	-moz-border-radius: 20px 20px 0 0 ;
+	-o-border-radius:20px 20px 0 0 ;
+	-ms-border-radius:20px 20px 0 0 ;
 	padding: 10px 20px;
 	overflow: hidden;
 }

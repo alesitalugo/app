@@ -1,12 +1,10 @@
-
-
 var rotate_circle = function( section ){
 	console.log( section );
-	/*
-	$('.grass').rotate({animateTo:-180}, 100, 'expo', function(){
-		$('.title_section div').removeClass().addClass(section).rotate({animateTo: 360}, 300, 'expo');
-	}) ;
-*/
+	
+	$('.grass').rotate({animateTo: 180}, 100, 'expo');	
+	$('.title_section').rotate({animateTo: 360}, 300, 'expo');
+	$('#add_title').removeClass().addClass(section);
+	$('#button_'+section).fadeIn();	
 };
 
 var get_mapa_mexico = function(){
@@ -15,33 +13,99 @@ var get_mapa_mexico = function(){
 		type: 'GET',
 		url: '/templates/template_mapa.html',
 		beforeSend: function(){
-			console.log( 'Cargando' );
+			//console.log( 'Cargando' );
 		},
 		success: function( response ) {
+			//console.log('success');
 			$('#home').hide();
 			$('#stage').html( response ).fadeIn();
-			rotate_circle('mapa');
+			rotate_circle('mapa');			
 		}
 	});
 };
 
+var next_section = function(place){
+	var keep_select = null ;
+
+
+}
 var get_mapa_estado = function( estado ){
 
 	$.ajax({
 		type: 'GET',
-		url: '/templates/template_'+estado+'.html',
+		url: '/templates/maps/template_'+estado+'.html',
 		beforeSend: function(){
-			console.log( 'Cargando' );
+			//console.log( 'Cargando' );
 		},
 		success: function( response ) {
-			console.log( response );
+			//console.log( response );
+			//console.log(estado);
 			$('#home').hide();
+
 			$('#stage').html( response ).fadeIn();
 			rotate_circle('estado');
+			$('#stage .table-content, #stage .content_table').rollbar();
+
+
+			$('#stage .masterTooltip').each(function(){
+				var getTitle  = $(this).attr('title');
+				console.log(getTitle);		
+					var items = new Array(getTitle);
+					var ul;
+					$.each(items, function (index, value) {
+		    		if (index % 3==0)  {
+		        		$('.table-content').append(ul);
+		        			ul = $('.items-table');
+		    			}
+		    			var li = $('.item-row .item-column p').append(value);
+		    			ul.append(li);
+					});
+					$('body').append(ul);
+			});
+			
+        
+
+			/*var tooltip = 1;
+			var list = $('.items-table');
+			var howmany  = $('#stage .masterTooltip');
+			var name = $(howmany).attr('title');
+			for(m = 0; m <= howmany.length; m++){
+				//console.log(howmany[m]);
+				var array = howmany[m];
+				var ques = $(array).attr('title');
+				$('#stage').each.html(ques[m]);
+			}*/
+
+
+			/*$(' #stage .masterTooltip').each(function(){
+				var name = $(this).attr('title');
+				var noteList = '.items-row .item-column p a';
+				var createList  = $(noteList).html(name);
+				var el = $.map(name, function(val, i){
+					return $(noteList).html(val);
+				});
+				tooltip++;
+			});*/
+
 		}
 	});
 };
 
+var get_calificacion = function(calificacion){
+	$.ajax({
+		type: 'GET',
+		url: '/templates/template_calificacion.html',
+		beforeSend: function(){
+
+		}, 
+		success: function(response){
+			//console.log(response);
+			$('#home').hide();
+			$('#stage').html(response).fadeIn();
+			rotate_circle('estado');
+		}
+	});
+}
 
 /***** BACKBONE ROUTER ***/
 
@@ -49,13 +113,36 @@ var AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "home",
 		"estados": "ver_pais",
-		"estados/:estado": "ver_estado"
+		"estados/:estado": "ver_estado",
+		"calificacion": "ver_calificacion",
 	}
 });
-
+var global_sections = function(){
+	$('#header-logo').show();
+};
 var show_section_home = function(){
 	$('#stage').hide();
 	$('#home').fadeIn();
+	$('#header-logo').hide();
+	$('.line_home').animate({'height':'280px'}, 1000, function(){
+		$('.item_left').animate({
+			'left': '0px',
+			'opacity':1
+		}, 800, 'expo', function(){
+			$('.item_right').animate({
+				'left':'0px',
+				'opacity':1
+			}, 800, 'expo', function(){
+				$('#go_init').animate({
+					'opacity':1
+				}, 500);
+			});
+		});
+	});
+	$('#go_init').on('click', function(e){
+		e.preventDefault();
+		Backbone.history.navigate( 'estados', true );
+	});
 };
 
 var app_router = new AppRouter;
@@ -64,11 +151,14 @@ app_router.on('route:home', function ( actions ) {
 });
 app_router.on('route:ver_pais', function ( actions ) {
 	get_mapa_mexico();
+	global_sections();
 });
 app_router.on('route:ver_estado', function ( estado ) {
 	get_mapa_estado( estado );
 });
-
+app_router.on('route:ver_calificacion', function(calificacion){
+	get_calificacion(calificacion);
+});
 Backbone.history.start({ pushState: true });
 
 /**** ***/
@@ -80,6 +170,82 @@ $.easing.expo = function (x, t, b, c, d) {
     return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
 };
 $('.table-content, .content_table, .tip_content').rollbar();
+
+var move_section =function(arrow) {
+	var arrow = arrow;
+	var section = $('body').attr('class');
+	var nextSection = null;
+	var prevSection = null;
+
+	return{
+		'init': function(){
+			if(section !== null){
+				counter = 0;
+				$('.menu-item .link-menu').each(function(){
+					section = $('body').attr('class');
+					counter++;
+				});		
+			}
+		},
+		'next_section': function(){
+			/*$('.grass').rotate({animateTo:180}, 300,  'expo', function(){
+   				$('.title_section').rotate({animateTo: 360}, 600, 'expo');
+   			});
+			.data('menu', section)
+			 
+   			//console.log(section);
+   			$('body').attr('class');
+
+   			var menulink = $('.link-menu').data('menu', section).addClass('activate');
+   			//console.log(menulink);
+
+   			//console.log(counter);
+   			select_next(section);*/
+
+		}, 	
+		'prev_section': function(){
+			/*$('.grass').rotate({animateTo:-180}, 100, 'expo', function(){
+				$('.title_section').rotate({animateTo: 360}, 300, 'expo');
+			});*/
+		}
+	}
+}
+var navigate = new move_section(document.getElementById('next'));
+   	navigate.init();
+
+$('#next').on('click', function(e){
+   	e.preventDefault();
+	Backbone.history.navigate( 'estados', true );
+	$('.grass').rotate({animateTo:180}, 300,  'expo', function(){
+   		$('.title_section').rotate({animateTo: 360}, 600, 'expo');
+   	});
+});	
+$('#prev').on('click',  function(e){
+	e.preventDefault();
+	//navigate.prev_section();
+});
+$('.selected_calf').on('click', function(){
+	$('.selected').removeClass('on');
+	$(this).find('.selected').addClass('on');
+});
+
+
+$('#container').animate({'top':'0'}, 1000 , 'expo');
+$('.grass').rotate({animateTo: 180}, 100, 'expo');
+$('.title_section').rotate({animateTo:360}, 300, 'expo');
+$('.modal_button').on('click', function(){
+	$('.modal_button').removeClass('active');
+	$(this).addClass('active');
+});
+$('.close_modal').on('click', function(){
+	console.log('click');
+    $('.modal_tip').fadeOut(500);
+});
+$('#link_tips').on('click', function(){
+	$('.modal_tip').fadeIn(500, function(){
+		$('.content_modal').fadeIn(1000);
+	});
+});
 
 //tooltip function
 (function( $ ) {
@@ -156,92 +322,6 @@ sizeAdjust();
 var select_next = function(section){
 	
 }
-
-var move_section =function(arrow) {
-	var arrow = arrow;
-	var section = $('body').attr('class');
-	var nextSection = null;
-	var prevSection = null;
-
-	return{
-		'init': function(){
-			if(section !== null){
-				counter = 0;
-				$('.menu-item .link-menu').each(function(){
-					section = $('body').attr('class');
-					counter++;
-				});		
-			}
-		},
-		'next_section': function(){
-			/*$('.grass').rotate({animateTo:180}, 300,  'expo', function(){
-   				$('.title_section').rotate({animateTo: 360}, 600, 'expo');
-   			});
-			.data('menu', section)
-			*/ 
-   			//console.log(section);
-   			$('body').attr('class');
-
-   			var menulink = $('.link-menu').data('menu', section).addClass('activate');
-   			//console.log(menulink);
-
-   			//console.log(counter);
-   			select_next(section);
-
-		}, 	
-		'prev_section': function(){
-			/*$('.grass').rotate({animateTo:-180}, 100, 'expo', function(){
-				$('.title_section').rotate({animateTo: 360}, 300, 'expo');
-			});*/
-		}
-	}
-}
-var navigate = new move_section(document.getElementById('next'));
-   	navigate.init();
-
-$('#next').on('click', function(e){
-   	e.preventDefault();
-	Backbone.history.navigate( 'estados', true );
-});	
-$('#prev').on('click',  function(e){
-	e.preventDefault();
-	navigate.prev_section();
-});
-$('.selected_calf').on('click', function(){
-	$('.selected').removeClass('on');
-	$(this).find('.selected').addClass('on');
-});
-$('.line_home').animate({'height':'280px'}, 1000, function(){
-	$('.item_left').animate({
-		'left': '0px',
-		'opacity':1
-	}, 800, 'expo', function(){
-		$('.item_right').animate({
-			'left':'0px',
-			'opacity':1
-		}, 800, 'expo', function(){
-			$('#go_init').animate({
-				'opacity':1
-			}, 500);
-		});
-	});
-});
-$('#container').animate({'top':'0'}, 1000 , 'expo');
-$('.grass').rotate({animateTo: 180}, 100, 'expo');
-$('.title_section').rotate({animateTo:360}, 300, 'expo');
-$('.modal_button').on('click', function(){
-	$('.modal_button').removeClass('active');
-	$(this).addClass('active');
-});
-$('.close_modal').on('click', function(){
-	console.log('click');
-    $('.modal_tip').fadeOut(500);
-});
-$('#link_tips').on('click', function(){
-	$('.modal_tip').fadeIn(500, function(){
-		$('.content_modal').fadeIn(1000);
-	});
-});
 
 /*GRÁFICA ROUND SVG ANIMATE
 
