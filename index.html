@@ -13,7 +13,8 @@
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <link rel="stylesheet" type="text/css" href="styles/jquery.rollbar.css">
-        <link rel="stylesheet" type="text/css" href="font/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="font/stylesheet.css">  
+        <link rel="stylesheet" type="text/css" href="styles/resolution.css">
         <!-- endbuild -->
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
@@ -24,50 +25,52 @@
         <div class="plant-left"></div>        
         <div class="plant-right"></div>
         <div id="header-logo">
-            <a href="#">
-                <img src="images/new/sisevive01.png">
-            </a>
+            <div class="header_background">
+                <a href="#">    
+                    <img src="images/new/sisevive01.png">
+                </a>
+            </div>
         </div>
 
         <div id="header">
              <ul class="nav nav-pills pull-right">
-                <li class="menu-item" id="button_mapa">
+                <li class="menu-item menuon" id="button_mapa">
                     <a id="menu-estado" class="link-menu" data-menu="estado">
                         <span class="icon"><i></i></span>
                         <p>estado</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_estado">
+                <li class="menu-item menuon" id="button_estado">
                     <a class="link-menu" id="menudos" data-menu="municipio"> 
                         <span class="icon"><i></i></span>
                         <p>municipio</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_calificacion">
+                <li class="menu-item menuon" id="button_calificacion">
                     <a class="link-menu" id="menutres" data-menu="calificacion">
                         <span class="icon"><i></i></span>
                         <p>calificación</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_precio">
+                <li class="menu-item menuon" id="button_precio">
                     <a class="link-menu" id="menucuatro" data-menu="rangosprecio">
                         <span class="icon"><i></i></span>
                         <p>precio</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_vivienda">
+                <li class="menu-item menuon" id="button_vivienda">
                     <a class="link-menu" id="menucinco" data-menu="vivienda">
                         <span class="icon"><i></i></span>
                         <p>tipo de vivienda</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_resultados">
+                <li class="menu-item menuon" id="button_resultados">
                     <a class="link-menu" id="menuseis" data-menu="grafica">
                         <span class="icon"><i></i></span>
                         <p>búsqueda</p>
                     </a>
                 </li>
-                <li class="menu-item " id="button_busqueda">
+                <li class="menu-item menuon" id="button_busqueda">
                     <a class="link-menu" id="menusiete" data-menu="materiales">
                         <span class="icon"><i></i></span>
                         <p>resultados</p>
@@ -318,5 +321,6 @@
         </script>
         <script src="scripts/util.js"></script>
         <script src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/resize.js"></script>
     </body>
 </html>

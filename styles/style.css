@@ -16,9 +16,9 @@ a , a img {
 .animate_intro{
 	width: 800px;
 	margin: 0px auto;
-	height: 290px;
+	height: 250px;
 	position: relative;
-	top: 150px;
+	top: 110px;
 }
 .animate_intro .item_left{
 	float: left;
@@ -78,6 +78,12 @@ a , a img {
 	position: relative;
 }
 #header-logo{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	z-index: 1000;
+}
+.header_background{
 	width: 874px;
 	background: url('../images/new/backHeader01.png');
 	height: 173px;
@@ -108,7 +114,7 @@ a , a img {
 	margin: 20px auto;
 	clear: both;
 	position: relative;
-	top: 150px;
+	top: 110px;
 	opacity: 0;
 }
 #header-logo a {
@@ -123,7 +129,7 @@ a , a img {
 	height: 107px;
 	background: url('../images/new/plantsLeft01.png');
 	left: 0px;
-	position: absolute;
+	position: fixed;
 	background-position: 245px 0px;
 }
 #wrap {
@@ -357,8 +363,8 @@ a , a img {
 #footer{
 	background-color: #fff;
 	height: 180px;
-	position: fixed;
-	bottom: 0;
+	position: absolute;
+	bottom: -80px;
 	width: 100%;
 	z-index: 10;
 }
@@ -431,7 +437,7 @@ a , a img {
 	width: 1002px;
 	height: 961px;
 	position: fixed;
-	bottom: -615px;
+	bottom: -715px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -450,16 +456,16 @@ a , a img {
 
 
 .title_section .intro{
-	background: url(../images/new/titles/title_p01.png);
+	background: url('../images/new/titles/title_p01.png');
 }
 .title_section .mapa{
-	background: url(../images/new/titles/title_p02.png);
+	background: url('../images/new/titles/title_p02.png');
 }
 .title_section .estado{
-	background: url(../images/new/titles/title_p03.png);
+	background: url('../images/new/titles/title_p03.png');
 }
 .title_section .calificacion{
-	background: url(../images/new/titles/title_p04.png);
+	background: url('../images/new/titles/title_p04.png');
 }
 .title_section .rangosprecio{
 	background: url(../images/new/titles/title_p05.png);
@@ -487,7 +493,7 @@ a , a img {
 	width: 986px;
 	height: 801px;
 	position: fixed;
-	bottom: -530px;
+	bottom: -620px;
 	background-position: center;
 	background-repeat: no-repeat;
 }

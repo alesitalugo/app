@@ -1,6 +1,4 @@
-var rotate_circle = function( section ){
-	console.log( section );
-	
+var rotate_circle = function( section ){	
 	$('.grass').rotate({animateTo: 180}, 100, 'expo');	
 	$('.title_section').rotate({animateTo: 360}, 300, 'expo');
 	$('#add_title').removeClass().addClass(section);
@@ -40,6 +38,7 @@ var get_mapa_estado = function( estado ){
 		success: function( response ) {
 			//console.log( response );
 			//console.log(estado);
+			$('body').removeClass().addClass(response);
 			$('#home').hide();
 
 			$('#stage').html( response ).fadeIn();
@@ -293,31 +292,6 @@ var menuActive = $('.link-menu').data('menu');
 var nextHref = $(menuActive).next();
 var ultimoActive = $('.menuon a').last().data('menu');
 var section = $('body').attr('class');
-
-var sizeAdjust = function(){
-	var width = $(window).outerWidth();
-	var height = $(window).outerHeight();
-
-	if(height <= 730){
-		$('.container_modal').css({'margin':'70px auto'});
-		$('#header-logo').css({
-
-		});
-	} else {
-
-	}
-	if(width <= 980){
-
-	} else {
-
-	}
-}
-
-$(window).resize(function(){
-	sizeAdjust();
-});
-
-sizeAdjust();
 
 var select_next = function(section){
 	
